@@ -1,100 +1,177 @@
+import Carousel from "@/components/Carousel";
+import path from "path";
+import fs from "fs";
 import Image from "next/image";
+import Menu from "@/components/Menu";
+
+function getImages() {
+  const imagesDir = path.join(process.cwd(), "public/assets/images");
+  const files = fs.readdirSync(imagesDir);
+
+  return files
+    .filter((file) => /\.(jpg|jpeg|png|gif)$/i.test(file))
+    .map((file) => `/assets/images/${file}`);
+}
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const images = getImages();
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen font-sans bg-[#121212] text-[#eae0d5]">
+      <section className="relative w-full py-16 text-center bg-gradient-to-b from-[#181818] to-[#3a5a40] px-4">
+        <div className="absolute inset-0 z-0 bg-[url('/assets/images/restaurant-pattern.jpg')] bg-cover bg-center opacity-10"></div>
+        <div className="relative z-10">
+          <h1 className="text-5xl sm:text-6xl font-extrabold text-[#f4ce86] drop-shadow-lg mb-4">
+            Cedar's Mediterranean Lounge
+          </h1>
+          <p className="text-lg sm:text-xl text-[#f4efe8]">
+            Authentic flavors, cozy ambiance, and unforgettable moments.
+          </p>
+        </div>
+        <div className="relative z-10 flex items-center justify-center mx-auto mt-8">
+          <div className="w-60 h-60 sm:w-72 sm:h-72 bg-gradient-to-b from-[#556b2f] to-[#3a5a40] rounded-full flex items-center justify-center shadow-lg border-4 border-[#8b4513]">
+            <div className="w-56 h-56 sm:w-68 sm:h-68 bg-white rounded-full flex items-center justify-center overflow-hidden">
+              <Image
+                src="/assets/images/logo.JPG"
+                alt="Cedar's Mediterranean Lounge Logo"
+                width={250}
+                height={250}
+                className="object-contain scale-90 w-full h-full"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <Menu />
+      <section id="gallery" className="w-full py-10 bg-[#121212] px-4">
+        <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-[#f4ce86]">
+          Gallery
+        </h2>
+        <p className="text-sm sm:text-base text-[#eae0d5] mb-6">
+          Explore our ambiance and culinary delights.
+        </p>
+        <Carousel images={images} />
+      </section>
+      <section
+        id="location"
+        className="w-full py-10 bg-[#181818] px-4 text-center"
+      >
+        <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-[#f4ce86]">
+          Our Location
+        </h2>
+        <p className="text-sm sm:text-base text-[#eae0d5] mb-6">
+          Visit us at our cozy location in Windsor.
+        </p>
+        <div className="relative overflow-hidden rounded-lg shadow-lg border-2 border-[#8b4513]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.242163168727!2d-83.03321532444136!3d42.29617897919061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2b85f50dd0d1%3A0xa1f5c8df1fbe52af!2s166%20Tecumseh%20Rd%20W%2C%20Windsor%2C%20ON%20N8X%201E9%2C%20Canada!5e0!3m2!1sen!2sus!4v1674192318769!5m2!1sen!2sus"
+            width="100%"
+            height="400"
+            style={{ border: 0 }}
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full h-96"
+          ></iframe>
+        </div>
+      </section>
+      <section
+        id="hours"
+        className="w-full py-10 bg-[#181818] px-4 text-center"
+      >
+        <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-[#f4ce86]">
+          Hours of Operation
+        </h2>
+        <p className="text-sm sm:text-base text-[#eae0d5] mb-4">
+          Join us during our opening hours for a delightful experience.
+        </p>
+        <div className="text-sm sm:text-base text-[#f4efe8]">
+          <p>Monday: 8 a.m.–2 p.m.</p>
+          <p>Tuesday: Closed</p>
+          <p>Wednesday: 8 a.m.–2 p.m.</p>
+          <p>Thursday: 8 a.m.–2 p.m.</p>
+          <p>Friday: 8 a.m.–2 p.m.</p>
+          <p>Saturday: 8 a.m.–2 p.m.</p>
+          <p>Sunday: Closed</p>
+        </div>
+      </section>
+      <section id="videos" className="w-full py-10 px-4 bg-[#181818]">
+        <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-[#f4ce86]">
+          Our Story
+        </h2>
+        <p className="text-sm sm:text-base text-[#eae0d5] mb-6">
+          A glimpse into our culinary journey.
+        </p>
+        <div className="max-w-full sm:max-w-4xl mx-auto">
+          <video
+            className="w-full rounded-lg shadow-lg border-2 border-[#8b4513]"
+            controls
+            src="/assets/videos/video1.mp4"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
+      <section
+        id="contact"
+        className="w-full py-10 bg-[#121212] px-4 text-center"
+      >
+        <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-[#f4ce86]">
+          Contact Us
+        </h2>
+        <p className="text-sm sm:text-base text-[#eae0d5] mb-4">
+          We'd love to hear from you. Reach out or visit us!
+        </p>
+        <div className="text-sm sm:text-base text-[#f4efe8]">
+          <p className="mb-2">📍 166 Tecumseh Rd W, Windsor, ON N8X 1E9</p>
+          <p className="mb-2">📞 (519) 973-7240</p>
+          <p>📧 contact@cedarslounge.com</p>
+        </div>
+      </section>
+      <section
+        id="delivery"
+        className="w-full py-10 bg-[#121212] px-4 text-center"
+      >
+        <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-[#f4ce86]">
+          Order Delivery
+        </h2>
+        <p className="text-sm sm:text-base text-[#eae0d5] mb-6">
+          Enjoy your favorite dishes from the comfort of your home! Order now
+          through our trusted delivery partners.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <a
+            href="https://www.ubereats.com/ca/store/cedars-mediterranean-breakfast-lounge/orOBLU8pSLqgCwry8eLenQ"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#05A357] text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300"
+          >
+            <img
+              src="/assets/icons/ubereats-logo.svg"
+              alt="Uber Eats"
+              className="w-6 h-6"
             />
-            Deploy now
+            Order on Uber Eats
           </a>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
+            href="https://www.doordash.com/store/cedar's-mediterranean-breakfast-lounge-windsor-32283435/"
             rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-[#ef3b24] font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300"
           >
-            Read our docs
+            <img
+              src="/assets/icons/doordash-logo.svg"
+              alt="DoorDash"
+              className="w-6 h-6"
+            />
+            Order on DoorDash
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+      <footer className="w-full py-4 sm:py-6 text-center bg-[#8b4513] text-[#f4efe8]">
+        <p className="text-xs sm:text-sm">
+          © {new Date().getFullYear()} Cedar's Mediterranean Lounge. All rights
+          reserved.
+        </p>
       </footer>
     </div>
   );

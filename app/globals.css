@@ -19,3 +19,38 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Swiper */
+.custom-swiper-arrow {
+  color: #f4ce86;
+  font-size: 24px;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+}
+
+.custom-swiper-arrow::after {
+  font-size: 24px;
+  color: #f4ce86;
+}
+
+.custom-swiper-arrow:hover::after {
+  color: #d2a679;
+}
+
+.custom-swiper-dots {
+  bottom: 10px;
+}
+
+.custom-swiper-dots .swiper-pagination-bullet {
+  background: gray;
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+}
+
+.custom-swiper-dots .swiper-pagination-bullet-active {
+  background: #f4ce86;
+}
+/* End of Swiper */
