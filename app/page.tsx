@@ -22,7 +22,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0 bg-[url('/assets/images/restaurant-pattern.jpg')] bg-cover bg-center opacity-10"></div>
         <div className="relative z-10">
           <h1 className="text-5xl sm:text-6xl font-extrabold text-[#f4ce86] drop-shadow-lg mb-4">
-            Cedar's Mediterranean Lounge
+            Cedar&apos;s Mediterranean Lounge
           </h1>
           <p className="text-lg sm:text-xl text-[#f4efe8]">
             Authentic flavors, cozy ambiance, and unforgettable moments.
@@ -121,7 +121,7 @@ export default function Home() {
           Contact Us
         </h2>
         <p className="text-sm sm:text-base text-[#eae0d5] mb-4">
-          We'd love to hear from you. Reach out or visit us!
+          We&apos;d love to hear from you. Reach out or visit us!
         </p>
         <div className="text-sm sm:text-base text-[#f4efe8]">
           <p className="mb-2">📍 166 Tecumseh Rd W, Windsor, ON N8X 1E9</p>
@@ -146,9 +146,11 @@ export default function Home() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#05A357] text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300"
           >
-            <img
+            <Image
               src="/assets/icons/ubereats-logo.svg"
               alt="Uber Eats"
+              width={24}
+              height={24}
               className="w-6 h-6"
             />
             Order on Uber Eats
@@ -158,9 +160,11 @@ export default function Home() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-[#ef3b24] font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300"
           >
-            <img
+            <Image
               src="/assets/icons/doordash-logo.svg"
               alt="DoorDash"
+              width={24}
+              height={24}
               className="w-6 h-6"
             />
             Order on DoorDash
@@ -169,8 +173,8 @@ export default function Home() {
       </section>
       <footer className="w-full py-4 sm:py-6 text-center bg-[#8b4513] text-[#f4efe8]">
         <p className="text-xs sm:text-sm">
-          © {new Date().getFullYear()} Cedar's Mediterranean Lounge. All rights
-          reserved.
+          © {new Date().getFullYear()} Cedar&apos;s Mediterranean Lounge. All
+          rights reserved.
         </p>
       </footer>
     </div>

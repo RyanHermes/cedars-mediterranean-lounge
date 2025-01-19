@@ -44,8 +44,8 @@ export default function Menu() {
               </li>
               <li>
                 <span className="font-bold">All Meat Pizza:</span> A meat
-                lover's delight with pepperoni, ground beef, and crispy bacon
-                smothered in cheese and pizza sauce.
+                lover&apos;s delight with pepperoni, ground beef, and crispy
+                bacon smothered in cheese and pizza sauce.
               </li>
               <li>
                 <span className="font-bold">Chicken Pizza:</span> Juicy chicken
@@ -88,8 +88,8 @@ export default function Menu() {
                 finished with cheese and pizza sauce.
               </li>
               <li className="italic text-sm">
-                Prices: Medium (12") $12.99 | Large (14") $16.99 | Extra Large
-                (16") $19.99
+                Prices: Medium (12&lsquo;) $12.99 | Large (14&lsquo;) $16.99 |
+                Extra Large (16&lsquo;) $19.99
               </li>
             </ul>
           )}
@@ -155,9 +155,9 @@ export default function Menu() {
                 <div>
                   <strong>Pick Your Size:</strong>
                   <ul className="list-disc ml-5 mt-2">
-                    <li>Medium (12"): $9.99</li>
-                    <li>Large (14"): $11.99</li>
-                    <li>Extra Large (16"): $14.99</li>
+                    <li>Medium (12&lsquo;): $9.99</li>
+                    <li>Large (14&lsquo;): $11.99</li>
+                    <li>Extra Large (16&lsquo;): $14.99</li>
                   </ul>
                 </div>
                 <div>
