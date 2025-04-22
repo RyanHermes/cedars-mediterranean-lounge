@@ -33,16 +33,16 @@ export default function Menu() {
           {openSection === "classics" && (
             <ul className="mt-3 space-y-4 px-4">
               <li className="italic text-sm">
-                M 12" – $12.99 | L 14" – $16.99 | XL 16" – $19.99
+                M 12&quot; &ndash; $12.99 | L 14&quot; &ndash; $16.99 | XL 16&quot; &ndash; $19.99
               </li>
               <li>
                 <span className="font-bold">1- Pepperoni Pizza:</span> A classic pizza topped with pepperoni slices, melted cheese, and a rich pizza sauce for a bold flavor.
               </li>
               <li>
-                <span className="font-bold">2- Cheese Pizza:</span> Simple and timeless! Layers of melty cheese on top of our tangy pizza sauce (Mozzarella, Swiss, Cheddar, Parmesan & Feta).
+                <span className="font-bold">2- Cheese Pizza:</span> Simple and timeless! Layers of melty cheese on top of our tangy pizza sauce (Mozzarella, Swiss, Cheddar, Parmesan &amp; Feta).
               </li>
               <li>
-                <span className="font-bold">3- All Meat Pizza:</span> A meat lover's delight with pepperoni, ground beef, and crispy bacon smothered in cheese and pizza sauce.
+                <span className="font-bold">3- All Meat Pizza:</span> A meat lover&apos;s delight with pepperoni, ground beef, and crispy bacon smothered in cheese and pizza sauce.
               </li>
               <li>
                 <span className="font-bold">4- Chicken Pizza:</span> Juicy chicken paired with melted cheese on a perfectly baked crust with a savory pizza sauce.
@@ -63,14 +63,14 @@ export default function Menu() {
                 <span className="font-bold">9- Margherita Pizza:</span> Mozzarella cheese, red sauce, Fresh Basil, Olive oil.
               </li>
               <li>
-                <span className="font-bold">10- Cedar's Pizza:</span> Pizza sauce, Black Forest Ham, 2 Cheese toppings, green olives, mushroom, green peppers, Oregano.
+                <span className="font-bold">10- Cedar&apos;s Pizza:</span> Pizza sauce, Black Forest Ham, 2 Cheese toppings, green olives, mushroom, green peppers, Oregano.
                 <br />
-                <span className="italic text-sm">L 14" – $18.99 | XL 16" – $21.99</span>
+                <span className="italic text-sm">L 14&quot; &ndash; $18.99 | XL 16&quot; &ndash; $21.99</span>
               </li>
               <li>
                 <span className="font-bold">11- New York Pizza:</span> Pizza sauce & 4 Cheese mixed.
                 <br />
-                <span className="italic text-sm">L 14" – $18.99 | XL 16" – $21.99</span>
+                <span className="italic text-sm">L 14&quot; &ndash; $18.99 | XL 16&quot; &ndash; $21.99</span>
               </li>
             </ul>
           )}
@@ -87,17 +87,17 @@ export default function Menu() {
           {openSection === "buildYourOwn" && (
             <div className="mt-3 px-4 space-y-4">
               <p className="italic text-sm">
-                Choose any Toppings – $1.99 Each
+                Choose any Toppings &ndash; $1.99 Each
                 <br />
-                M 12" – $9.99 | L 14" – $11.99 | XL 16" – $14.99
+                M 12&quot; &ndash; $9.99 | L 14&quot; &ndash; $11.99 | XL 16&quot; &ndash; $14.99
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-sm sm:text-base">
                 <div>
                   <strong>Pick your size:</strong>
                   <ul className="list-disc ml-5 mt-2">
-                    <li>M 12" $9.99</li>
-                    <li>L 14" $11.99</li>
-                    <li>XL 16" $14.99</li>
+                    <li>M 12&quot; $9.99</li>
+                    <li>L 14&quot; $11.99</li>
+                    <li>XL 16&quot; $14.99</li>
                   </ul>
                 </div>
                 <div>
@@ -145,7 +145,7 @@ export default function Menu() {
                 <div>
                   <strong>Sauces:</strong>
                   <ul className="list-disc ml-5 mt-2">
-                    <li>Jalapeños</li>
+                    <li>Jalape&ntilde;os</li>
                     <li>Banana Hot pepper rings</li>
                     <li>Chili flakes</li>
                     <li>Pineapple</li>
@@ -193,7 +193,7 @@ export default function Menu() {
                 <span className="italic text-sm">10 Pcs (2 options of sauce) $12.99 | 20 Pcs (2 options of sauce) $23.99</span>
               </li>
               <li>
-                <span className="font-bold">16- Cedar's Burger:</span> $13.99 (Burger fries and pop)
+                <span className="font-bold">16- Cedar&apos;s Burger:</span> $13.99 (Burger fries and pop)
               </li>
               <li>
                 <span className="font-bold">17- Swiss mushrooms Burger:</span> $14.99 Combo

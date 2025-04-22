@@ -58,10 +58,10 @@ export default function Home() {
             href="/festival" 
             className="block bg-[#121212] p-6 rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
           >
-            <h3 className="text-xl font-semibold text-[#f4ce86] mb-3">St. Peter's Festival</h3>
+            <h3 className="text-xl font-semibold text-[#f4ce86] mb-3">St. Peter&apos;s Festival</h3>
             <p className="text-[#eae0d5] mb-2">June 27th - June 29th</p>
             <p className="text-sm text-[#f4efe8]">Celebrate with us during this special cultural festival featuring traditional Mediterranean cuisine, music, and entertainment</p>
-            <p className="text-sm text-[#f4ce86] mt-3">Click to view festival details →</p>
+            <p className="text-sm text-[#f4ce86] mt-3">Click to view festival details &rarr;</p>
           </a>
           <div className="bg-[#121212] p-6 rounded-lg border-2 border-[#8b4513]">
             <h3 className="text-xl font-semibold text-[#f4ce86] mb-3">Live Music Nights</h3>
@@ -146,7 +146,7 @@ export default function Home() {
           Our Story
         </h2>
         <p className="text-sm sm:text-base text-[#eae0d5] mb-8 text-center max-w-2xl mx-auto">
-          Experience the heart and soul of Cedar's Mediterranean Lounge through our videos. 
+          Experience the heart and soul of Cedar&apos;s Mediterranean Lounge through our videos. 
           From our authentic cooking process to the warm atmosphere, get a glimpse of what makes us special.
         </p>
         <div className="max-w-[360px] mx-auto">
