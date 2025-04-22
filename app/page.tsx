@@ -5,12 +5,12 @@ import Image from "next/image";
 import Menu from "@/components/Menu";
 
 function getImages() {
-  const imagesDir = path.join(process.cwd(), "public/assets/images");
+  const imagesDir = path.join(process.cwd(), "public/assets/images/carousel");
   const files = fs.readdirSync(imagesDir);
 
   return files
     .filter((file) => /\.(jpg|jpeg|png|gif)$/i.test(file))
-    .map((file) => `/assets/images/${file}`);
+    .map((file) => `/assets/images/carousel/${file}`);
 }
 
 export default function Home() {
@@ -43,6 +43,33 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section
+        id="events"
+        className="w-full py-10 bg-[#181818] px-4 text-center"
+      >
+        <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-[#f4ce86]">
+          Events & Festivals
+        </h2>
+        <p className="text-sm sm:text-base text-[#eae0d5] mb-6">
+          Join us for special events and cultural celebrations throughout the year.
+        </p>
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+          <a 
+            href="/festival" 
+            className="block bg-[#121212] p-6 rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
+          >
+            <h3 className="text-xl font-semibold text-[#f4ce86] mb-3">St. Peter's Festival</h3>
+            <p className="text-[#eae0d5] mb-2">June 27th - June 29th</p>
+            <p className="text-sm text-[#f4efe8]">Celebrate with us during this special cultural festival featuring traditional Mediterranean cuisine, music, and entertainment</p>
+            <p className="text-sm text-[#f4ce86] mt-3">Click to view festival details →</p>
+          </a>
+          <div className="bg-[#121212] p-6 rounded-lg border-2 border-[#8b4513]">
+            <h3 className="text-xl font-semibold text-[#f4ce86] mb-3">Live Music Nights</h3>
+            <p className="text-[#eae0d5] mb-2">Every Friday & Saturday</p>
+            <p className="text-sm text-[#f4efe8]">Enjoy traditional Mediterranean music while dining</p>
+          </div>
+        </div>
+      </section>
       <Menu />
       <section id="gallery" className="w-full py-10 bg-[#121212] px-4">
         <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-[#f4ce86]">
@@ -62,6 +89,9 @@ export default function Home() {
         </h2>
         <p className="text-sm sm:text-base text-[#eae0d5] mb-6">
           Visit us at our cozy location in Windsor.
+        </p>
+        <p className="text-sm sm:text-base text-[#eae0d5] mb-6">
+          Enter through the parking lot door.
         </p>
         <div className="relative overflow-hidden rounded-lg shadow-lg border-2 border-[#8b4513]">
           <iframe
@@ -83,32 +113,49 @@ export default function Home() {
         <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-[#f4ce86]">
           Hours of Operation
         </h2>
-        <p className="text-sm sm:text-base text-[#eae0d5] mb-4">
-          Join us during our opening hours for a delightful experience.
+        <p className="text-sm sm:text-base text-[#eae0d5] mb-8">
+          Join us during our opening hours for a delightful Mediterranean experience.
         </p>
-        <div className="text-sm sm:text-base text-[#f4efe8]">
-          <p>Monday: 8 a.m.–2 p.m.</p>
-          <p>Tuesday: Closed</p>
-          <p>Wednesday: 8 a.m.–2 p.m.</p>
-          <p>Thursday: 8 a.m.–2 p.m.</p>
-          <p>Friday: 8 a.m.–2 p.m.</p>
-          <p>Saturday: 8 a.m.–2 p.m.</p>
-          <p>Sunday: Closed</p>
+        <div className="max-w-md mx-auto bg-[#202020] rounded-lg p-6 border-2 border-[#8b4513] shadow-lg">
+          <div className="grid grid-cols-2 gap-3 text-[#f4efe8]">
+            <div className="text-right font-semibold">Sunday:</div>
+            <div className="text-left text-[#f4ce86]">Closed</div>
+            
+            <div className="text-right font-semibold">Monday:</div>
+            <div className="text-left text-[#f4ce86]">Closed</div>
+            
+            <div className="text-right font-semibold">Tuesday:</div>
+            <div className="text-left text-[#f4ce86]">9 a.m. – 6 p.m.</div>
+            
+            <div className="text-right font-semibold">Wednesday:</div>
+            <div className="text-left text-[#f4ce86]">9 a.m. – 6 p.m.</div>
+            
+            <div className="text-right font-semibold">Thursday:</div>
+            <div className="text-left text-[#f4ce86]">9 a.m. – 6 p.m.</div>
+            
+            <div className="text-right font-semibold">Friday:</div>
+            <div className="text-left text-[#f4ce86]">9 a.m. – 6 p.m.</div>
+            
+            <div className="text-right font-semibold">Saturday:</div>
+            <div className="text-left text-[#f4ce86]">9 a.m. – 6 p.m.</div>
+          </div>
         </div>
       </section>
       <section id="videos" className="w-full py-10 px-4 bg-[#181818]">
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-[#f4ce86]">
+        <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-[#f4ce86] text-center">
           Our Story
         </h2>
-        <p className="text-sm sm:text-base text-[#eae0d5] mb-6">
-          A glimpse into our culinary journey.
+        <p className="text-sm sm:text-base text-[#eae0d5] mb-8 text-center max-w-2xl mx-auto">
+          Experience the heart and soul of Cedar's Mediterranean Lounge through our videos. 
+          From our authentic cooking process to the warm atmosphere, get a glimpse of what makes us special.
         </p>
-        <div className="max-w-full sm:max-w-4xl mx-auto">
+        <div className="max-w-[360px] mx-auto">
           <video
-            className="w-full rounded-lg shadow-lg border-2 border-[#8b4513]"
+            className="w-full h-auto rounded-lg border-2 border-[#8b4513]"
             controls
-            src="/assets/videos/video1.mp4"
+            style={{ aspectRatio: '9/16' }}
           >
+            <source src="/assets/videos/video1.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -123,10 +170,27 @@ export default function Home() {
         <p className="text-sm sm:text-base text-[#eae0d5] mb-4">
           We&apos;d love to hear from you. Reach out or visit us!
         </p>
-        <div className="text-sm sm:text-base text-[#f4efe8]">
+        <div className="text-sm sm:text-base text-[#f4efe8] mb-6">
           <p className="mb-2">📍 166 Tecumseh Rd W, Windsor, ON N8X 1E9</p>
-          <p className="mb-2">📞 (519) 973-7240</p>
-          <p>📧 contact@cedarslounge.com</p>
+          <p className="mb-2">📞 (226) 739-7240</p>
+          <p>📧 cedar.m.b.lounge@gmail.com</p>
+        </div>
+        <div className="flex justify-center">
+          <a
+            href="https://www.facebook.com/cedarsmediterraneanlounge"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#1877F2] text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300"
+          >
+            <Image
+              src="/assets/icons/facebook-logo.png"
+              alt="Facebook"
+              width={24}
+              height={24}
+              className="w-6 h-6"
+            />
+            Follow us on Facebook
+          </a>
         </div>
       </section>
       <section

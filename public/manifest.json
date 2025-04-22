@@ -1,0 +1,21 @@
+{
+  "name": "Cedar's Mediterranean Lounge",
+  "short_name": "Cedar's",
+  "description": "Authentic Mediterranean cuisine in Windsor, Ontario",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#8b4513",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+} 
