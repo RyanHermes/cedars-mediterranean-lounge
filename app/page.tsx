@@ -51,22 +51,34 @@ export default function Home() {
           Events & Festivals
         </h2>
         <p className="text-sm sm:text-base text-[#eae0d5] mb-6">
-          Join us for special events and cultural celebrations throughout the year.
+          Join us for special events and cultural celebrations throughout the
+          year.
         </p>
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-          <a 
-            href="/festival" 
+          <a
+            href="/festival"
             className="block bg-[#121212] p-6 rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
           >
-            <h3 className="text-xl font-semibold text-[#f4ce86] mb-3">St. Peter&apos;s Festival</h3>
+            <h3 className="text-xl font-semibold text-[#f4ce86] mb-3">
+              Lebanese Festival
+            </h3>
             <p className="text-[#eae0d5] mb-2">June 27th - June 29th</p>
-            <p className="text-sm text-[#f4efe8]">Celebrate with us during this special cultural festival featuring traditional Mediterranean cuisine, music, and entertainment</p>
-            <p className="text-sm text-[#f4ce86] mt-3">Click to view festival details &rarr;</p>
+            <p className="text-sm text-[#f4efe8]">
+              Celebrate with us during this special cultural festival featuring
+              traditional Mediterranean cuisine, music, and entertainment
+            </p>
+            <p className="text-sm text-[#f4ce86] mt-3">
+              Click to view festival details &rarr;
+            </p>
           </a>
           <div className="bg-[#121212] p-6 rounded-lg border-2 border-[#8b4513]">
-            <h3 className="text-xl font-semibold text-[#f4ce86] mb-3">Live Music Nights</h3>
+            <h3 className="text-xl font-semibold text-[#f4ce86] mb-3">
+              Live Music Nights
+            </h3>
             <p className="text-[#eae0d5] mb-2">Every Friday & Saturday</p>
-            <p className="text-sm text-[#f4efe8]">Enjoy traditional Mediterranean music while dining</p>
+            <p className="text-sm text-[#f4efe8]">
+              Enjoy traditional Mediterranean music while dining
+            </p>
           </div>
         </div>
       </section>
@@ -114,28 +126,29 @@ export default function Home() {
           Hours of Operation
         </h2>
         <p className="text-sm sm:text-base text-[#eae0d5] mb-8">
-          Join us during our opening hours for a delightful Mediterranean experience.
+          Join us during our opening hours for a delightful Mediterranean
+          experience.
         </p>
         <div className="max-w-md mx-auto bg-[#202020] rounded-lg p-6 border-2 border-[#8b4513] shadow-lg">
           <div className="grid grid-cols-2 gap-3 text-[#f4efe8]">
             <div className="text-right font-semibold">Sunday:</div>
             <div className="text-left text-[#f4ce86]">Closed</div>
-            
+
             <div className="text-right font-semibold">Monday:</div>
             <div className="text-left text-[#f4ce86]">Closed</div>
-            
+
             <div className="text-right font-semibold">Tuesday:</div>
             <div className="text-left text-[#f4ce86]">9 a.m. – 6 p.m.</div>
-            
+
             <div className="text-right font-semibold">Wednesday:</div>
             <div className="text-left text-[#f4ce86]">9 a.m. – 6 p.m.</div>
-            
+
             <div className="text-right font-semibold">Thursday:</div>
             <div className="text-left text-[#f4ce86]">9 a.m. – 6 p.m.</div>
-            
+
             <div className="text-right font-semibold">Friday:</div>
             <div className="text-left text-[#f4ce86]">9 a.m. – 6 p.m.</div>
-            
+
             <div className="text-right font-semibold">Saturday:</div>
             <div className="text-left text-[#f4ce86]">9 a.m. – 6 p.m.</div>
           </div>
@@ -146,14 +159,15 @@ export default function Home() {
           Our Story
         </h2>
         <p className="text-sm sm:text-base text-[#eae0d5] mb-8 text-center max-w-2xl mx-auto">
-          Experience the heart and soul of Cedar&apos;s Mediterranean Lounge through our videos. 
-          From our authentic cooking process to the warm atmosphere, get a glimpse of what makes us special.
+          Experience the heart and soul of Cedar&apos;s Mediterranean Lounge
+          through our videos. From our authentic cooking process to the warm
+          atmosphere, get a glimpse of what makes us special.
         </p>
         <div className="max-w-[360px] mx-auto">
           <video
             className="w-full h-auto rounded-lg border-2 border-[#8b4513]"
             controls
-            style={{ aspectRatio: '9/16' }}
+            style={{ aspectRatio: "9/16" }}
           >
             <source src="/assets/videos/video1.mp4" type="video/mp4" />
             Your browser does not support the video tag.

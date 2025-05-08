@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Cedar's Mediterranean Lounge",
-  description: "Authentic Mediterranean cuisine, cozy ambiance, and unforgettable moments in Windsor, Ontario.",
+  description:
+    "Authentic Mediterranean cuisine, cozy ambiance, and unforgettable moments in Windsor, Ontario.",
 };
 
 export default function RootLayout({
