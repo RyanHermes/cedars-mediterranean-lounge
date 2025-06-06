@@ -16,13 +16,13 @@ function getImages() {
 export default function Home() {
   const images = getImages();
 
-  if (process.env.NODE_ENV === "production") {
-    return (
-      <div className="flex items-center justify-center min-h-screen text-2xl text-[#f4ce86] bg-[#121212]">
-        Under Construction 🚧
-      </div>
-    );
-  }
+  // if (process.env.NODE_ENV === "production") {
+  //   return (
+  //     <div className="flex items-center justify-center min-h-screen text-2xl text-[#f4ce86] bg-[#121212]">
+  //       Under Construction 🚧
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen font-sans bg-[#121212] text-[#eae0d5]">
