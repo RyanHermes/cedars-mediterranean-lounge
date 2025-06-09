@@ -24,8 +24,7 @@ export default function CateringPage() {
             Daily Special Plates
           </h2>
           <p className="text-sm sm:text-base text-[#eae0d5] mb-4">
-            Delicious and convenient options for lunch and dinner. Each platter
-            is priced at $23.99.
+            Delicious and convenient options for lunch and dinner.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
             <div>
@@ -87,8 +86,7 @@ export default function CateringPage() {
             Fresh Bakery
           </h2>
           <p className="text-sm sm:text-base text-[#eae0d5] mb-4">
-            A wide variety of pizzas and traditional pies. Prices as per our
-            regular menu.
+            A wide variety of pizzas and traditional pies.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 text-sm text-[#f4efe8]">
             <h3 className="text-xl font-semibold text-[#f4ce86] mb-2 md:col-span-2">
@@ -137,23 +135,23 @@ export default function CateringPage() {
             Fresh and flavorful salads, available in two sizes.
           </p>
           <ul className="space-y-2 text-sm text-[#f4efe8]">
-            <li>Salad Ruce: $9.99 (for 4) / $14.99 (for 8)</li>
-            <li>Palmito Salad: $9.99 (for 4) / $16.99 (for 8)</li>
-            <li>Fatoush: $8.99 (for 4) / $15.99 (for 8)</li>
-            <li>Taboule: $8.99 (for 4) / $15.99 (for 8)</li>
-            <li>Cesar Salad: $8.99 (for 4) / $15.99 (for 8)</li>
-            <li>Chicken Cesar Salad: $10.99 (for 4) / $19.99 (for 8)</li>
-            <li>Rocca Salade: $8.99 (for 4) / $19.99 (for 8)</li>
-            <li>Greek Salad: $8.99 (for 4) / $16.99 (for 8)</li>
-            <li>Coleslaw: $7.99 (for 4) / $16.99 (for 8)</li>
-            <li>Smoked Salmon Salade: $14.99 (for 4) / $29.99 (for 8)</li>
+            <li>Salad Ruce: (for 4) / (for 8)</li>
+            <li>Palmito Salad: (for 4) / (for 8)</li>
+            <li>Fatoush: (for 4) / (for 8)</li>
+            <li>Taboule: (for 4) / (for 8)</li>
+            <li>Cesar Salad: (for 4) / (for 8)</li>
+            <li>Chicken Cesar Salad: (for 4) / (for 8)</li>
+            <li>Rocca Salade: (for 4) / (for 8)</li>
+            <li>Greek Salad: (for 4) / (for 8)</li>
+            <li>Coleslaw: (for 4) / (for 8)</li>
+            <li>Smoked Salmon Salade: (for 4) / (for 8)</li>
             <li>
               Special Cedar&apos;s King Salade (Fatoush, Zbib, Jawz, Strawberry,
-              Avocado): $15.99 (for 4) / $29.99 (for 8)
+              Avocado): (for 4) / (for 8)
             </li>
             <li>
               Sweet and Sour Salade (Lettuce, Apple, Orange, Avocado, Mustard &
-              Lemon Sauce): $29.99 (for 8)
+              Lemon Sauce): (for 8)
             </li>
           </ul>
         </section>
@@ -170,54 +168,54 @@ export default function CateringPage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 text-sm text-[#f4efe8]">
             <ul className="space-y-1">
-              <li>Hummus: $8.99 (1kg for 4) / $21.99</li>
-              <li>Hummus with Meat: $8.99 (1kg for 4) / $21.99</li>
-              <li>Tripoly Hummus: $21.99</li>
-              <li>Beirut Hummus: $21.99</li>
-              <li>Baba Ghanouj: $23.99</li>
-              <li>Spicy Potatoes: $24.99</li>
-              <li>Stuffed Kebbeh: $15.99</li>
-              <li>Grape Leaves: 25pcs $12.99</li>
-              <li>Cheese Roll: $11.99</li>
-              <li>Grilled Haloumeh: $26.99</li>
-              <li>Greek Brushetta: $11.99</li>
-              <li>Garlic Butter Shrimp: 16pcs $22.99</li>
-              <li>Stuffed Mushrooms: $22.99</li>
-              <li>Mouhammara: $19.99</li>
-              <li>Labneh with Garlic: $29.99</li>
-              <li>Labneh: $29.99</li>
-              <li>Shanklish with Onion: $29.99</li>
-              <li>Makanek: 1.5kg $34.99</li>
-              <li>Sujok: 1.5kg $34.99</li>
+              <li>Hummus: (1kg for 4)</li>
+              <li>Hummus with Meat: (1kg for 4)</li>
+              <li>Tripoly Hummus</li>
+              <li>Beirut Hummus</li>
+              <li>Baba Ghanouj</li>
+              <li>Spicy Potatoes</li>
+              <li>Stuffed Kebbeh</li>
+              <li>Grape Leaves: 25pcs</li>
+              <li>Cheese Roll</li>
+              <li>Grilled Haloumeh</li>
+              <li>Greek Brushetta</li>
+              <li>Garlic Butter Shrimp: 16pcs</li>
+              <li>Stuffed Mushrooms</li>
+              <li>Mouhammara</li>
+              <li>Labneh with Garlic</li>
+              <li>Labneh</li>
+              <li>Shanklish with Onion</li>
+              <li>Makanek: 1.5kg</li>
+              <li>Sujok: 1.5kg</li>
             </ul>
             <ul className="space-y-1">
-              <li>Tajen: $27.99</li>
-              <li>Harrah: $18.99</li>
-              <li>Calamari: 1kg $25.99</li>
-              <li>Bayd Ghanam: 1kg $32.99</li>
-              <li>Lsenet Mtabaleh: 1kg $32.99</li>
-              <li>Mixed Pastry Puff: 8pcs $16.99</li>
-              <li>Soiree: $11.99</li>
-              <li>Tuna Bite: $11.99</li>
-              <li>Chicken Bite: $11.99</li>
-              <li>Hot Dog Bite: $11.99</li>
-              <li>Sanbousek (Dozen Price)</li>
-              <li>Pizza Pie (Dozen Price)</li>
-              <li>Zaatar Pie (Dozen Price)</li>
-              <li>Meat Pie Sfiha (Dozen Price)</li>
-              <li>Smoked Salmon Pie: $20.99</li>
-              <li>Stuffed Eggplant: $24.99</li>
-              <li>Focaccia Bread: $11.99</li>
-              <li>Mosakaa Eggplant: $19.99</li>
-              <li>Mozzarella Sticks: $11.99</li>
-              <li>Mac & Cheese: $20.99</li>
-              <li>Cheese Garlic Bread: $11.99</li>
-              <li>Stuffed Meat Bolls: $11.99</li>
-              <li>Chicken Bolls: $11.99</li>
-              <li>Loubieh with Garlic: $15.99</li>
-              <li>Eggplant Moutabal (Onion & Tomatoes): $24.99</li>
-              <li>Spinach Pie (Dozen Price)</li>
-              <li>Falafel (Dozen Price)</li>
+              <li>Tajen</li>
+              <li>Harrah</li>
+              <li>Calamari: 1kg</li>
+              <li>Bayd Ghanam: 1kg</li>
+              <li>Lsenet Mtabaleh: 1kg</li>
+              <li>Mixed Pastry Puff: 8pcs</li>
+              <li>Soiree</li>
+              <li>Tuna Bite</li>
+              <li>Chicken Bite</li>
+              <li>Hot Dog Bite</li>
+              <li>Sanbousek (Dozen)</li>
+              <li>Pizza Pie (Dozen)</li>
+              <li>Zaatar Pie (Dozen)</li>
+              <li>Meat Pie Sfiha (Dozen)</li>
+              <li>Smoked Salmon Pie</li>
+              <li>Stuffed Eggplant</li>
+              <li>Focaccia Bread</li>
+              <li>Mosakaa Eggplant</li>
+              <li>Mozzarella Sticks</li>
+              <li>Mac & Cheese</li>
+              <li>Cheese Garlic Bread</li>
+              <li>Stuffed Meat Bolls</li>
+              <li>Chicken Bolls</li>
+              <li>Loubieh with Garlic</li>
+              <li>Eggplant Moutabal (Onion & Tomatoes)</li>
+              <li>Spinach Pie (Dozen)</li>
+              <li>Falafel (Dozen)</li>
             </ul>
           </div>
         </section>
@@ -232,11 +230,11 @@ export default function CateringPage() {
           <ul className="space-y-2 text-sm text-[#f4efe8]">
             <li>
               Mixed BBQ Tray (Chicken Tawouk, Beef BBQ, Kabab BBQ, add Grilled
-              Shrimp option): $159.99
+              Shrimp option)
             </li>
-            <li>Fried Fish (By Pound)</li>
-            <li>Grilled Fish (By Pound)</li>
-            <li>Grilled Salmon (By Pound)</li>
+            <li>Fried Fish</li>
+            <li>Grilled Fish</li>
+            <li>Grilled Salmon</li>
           </ul>
         </section>
 
@@ -248,10 +246,10 @@ export default function CateringPage() {
             Sides
           </h2>
           <ul className="space-y-2 text-sm text-[#f4efe8]">
-            <li>Mashed Potatoes: $6.99 / $12.99</li>
-            <li>French Fries: $6.99 / $9.99</li>
-            <li>Rice: $2.99 / $9.99</li>
-            <li>Soup: $3.99 / $12.99</li>
+            <li>Mashed Potatoes</li>
+            <li>French Fries</li>
+            <li>Rice</li>
+            <li>Soup</li>
           </ul>
         </section>
 
