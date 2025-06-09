@@ -81,11 +81,15 @@ export default function Home() {
           </a>
           <div className="bg-[#121212] p-6 rounded-lg border-2 border-[#8b4513]">
             <h3 className="text-xl font-semibold text-[#f4ce86] mb-3">
-              Live Music Nights
+              Catering Services
             </h3>
-            <p className="text-[#eae0d5] mb-2">Every Friday & Saturday</p>
+            <p className="text-[#eae0d5] mb-2">Available for your events</p>
             <p className="text-sm text-[#f4efe8]">
-              Enjoy traditional Mediterranean music while dining
+              Bring the taste of Cedar&apos;s to your special occasions. We
+              offer catering for parties, gatherings, and corporate events.
+            </p>
+            <p className="text-sm text-[#f4ce86] mt-3">
+              Contact us for more details &rarr;
             </p>
           </div>
         </div>
