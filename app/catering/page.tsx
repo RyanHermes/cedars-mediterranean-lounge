@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function CateringPage() {
   return (
@@ -316,9 +316,9 @@ export default function CateringPage() {
       </main>
 
       <footer className="w-full mt-12 py-4 sm:py-6 text-center bg-[#8b4513] text-[#f4efe8]">
-        <a href="/" className="text-sm hover:underline">
+        <Link href="/" className="text-sm hover:underline">
           ← Back to Homepage
-        </a>
+        </Link>
         <p className="text-xs sm:text-sm mt-2">
           © {new Date().getFullYear()} Cedar&apos;s Mediterranean Lounge. All
           rights reserved.
