@@ -146,10 +146,10 @@ export default function Home() {
             <div className="text-left text-[#f4ce86]">Closed</div>
 
             <div className="text-right font-semibold">Tuesday:</div>
-            <div className="text-left text-[#f4ce86]">9 a.m. – 6 p.m.</div>
+            <div className="text-left text-[#f4ce86]">Closed</div>
 
             <div className="text-right font-semibold">Wednesday:</div>
-            <div className="text-left text-[#f4ce86]">9 a.m. – 6 p.m.</div>
+            <div className="text-left text-[#f4ce86]">Closed</div>
 
             <div className="text-right font-semibold">Thursday:</div>
             <div className="text-left text-[#f4ce86]">9 a.m. – 6 p.m.</div>
