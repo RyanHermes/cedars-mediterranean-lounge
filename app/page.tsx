@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen font-sans bg-[#121212] text-[#eae0d5]">
       <section className="relative w-full py-16 text-center bg-gradient-to-b from-[#181818] to-[#3a5a40] px-4">
-        <div className="absolute inset-0 z-0 bg-[url('/assets/images/restaurant-pattern.jpg')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 z-0 bg-cover bg-center opacity-10"></div>
         <div className="relative z-10">
           <h1 className="text-5xl sm:text-6xl font-extrabold text-[#f4ce86] drop-shadow-lg mb-4">
             Cedar&apos;s Mediterranean Lounge
@@ -79,19 +79,24 @@ export default function Home() {
               Click to view festival details &rarr;
             </p>
           </a>
-          <div className="bg-[#121212] p-6 rounded-lg border-2 border-[#8b4513]">
+          <a
+            href="/catering"
+            className="block bg-[#121212] p-6 rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
+          >
             <h3 className="text-xl font-semibold text-[#f4ce86] mb-3">
               Catering Services
             </h3>
             <p className="text-[#eae0d5] mb-2">Available for your events</p>
-            <p className="text-sm text-[#f4efe8]">
+            <p className="text-sm text-[#f4efe8] mb-3">
               Bring the taste of Cedar&apos;s to your special occasions. We
-              offer catering for parties, gatherings, and corporate events.
+              offer a wide range of catering options for parties, gatherings,
+              and corporate events.
             </p>
             <p className="text-sm text-[#f4ce86] mt-3">
-              Contact us for more details &rarr;
+              Click for full catering menu and to discuss your event needs!
+              &rarr;
             </p>
-          </div>
+          </a>
         </div>
       </section>
       <Menu />
