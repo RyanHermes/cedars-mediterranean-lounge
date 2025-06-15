@@ -23,7 +23,7 @@ export default function AppHeader() {
           href="/"
           className="flex items-center flex-shrink min-w-0 mr-2 overflow-hidden whitespace-nowrap text-ellipsis group"
           onClick={closeMobileMenu}
-        >
+          legacyBehavior>
           <div className="mr-3 flex-shrink-0">
             <Image
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Arms_of_Lebanon.svg/640px-Arms_of_Lebanon.svg.png"
@@ -106,7 +106,7 @@ export default function AppHeader() {
                 href="/pre-festival-event"
                 className="bg-yellow-500 text-black text-sm md:text-base px-2 py-1 rounded hover:bg-yellow-400 block text-center md:inline whitespace-nowrap"
                 onClick={closeMobileMenu}
-              >
+                legacyBehavior>
                 <strong>Special Event: June 22nd!</strong>
               </Link>
             </li>
