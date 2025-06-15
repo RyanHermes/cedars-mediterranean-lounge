@@ -8,17 +8,17 @@ The project was engineered with Next.js, TypeScript, and Tailwind CSS.
 
 ## Features
 
-* **Responsive Design**: A mobile-first approach ensures a seamless user experience on all devices, from desktops to smartphones.
-* **Catering & Menu Pages**: The website includes detailed pages for menus and catering services, as indicated by recent updates.
+- **Responsive Design**: A mobile-first approach ensures a seamless user experience on all devices, from desktops to smartphones.
+- **Catering & Menu Pages**: The website includes detailed pages for menus and catering services, as indicated by recent updates.
 
 ## Tech Stack
 
-* **Framework**: Next.js
-* **Language**: TypeScript
-* **Styling**: Tailwind CSS  & PostCSS
-* **Database**: PostgreSQL
-* **Linting**: ESLint
-* **Package Manager**: pnpm
+- **Framework**: Next.js
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS & PostCSS
+- **Database**: PostgreSQL
+- **Linting**: ESLint
+- **Package Manager**: pnpm
 
 ## Getting Started
 
@@ -28,8 +28,8 @@ Follow these instructions to get a local copy up and running for development and
 
 Make sure you have Node.js and pnpm installed on your machine.
 
-* [Node.js](https://nodejs.org/)
-* [pnpm](https://pnpm.io/installation)
+- [Node.js](https://nodejs.org/)
+- [pnpm](https://pnpm.io/installation)
 
 ### Installation
 
@@ -60,6 +60,7 @@ Make sure you have Node.js and pnpm installed on your machine.
 ## Contact
 
 Ryan Hermes
-* **Email**: ryanhermes@pm.me 
-* **Website**: [ryanhermes.ca](https://ryanhermes.ca) 
-* **LinkedIn**: [linkedin.com/in/ryan--hermes](https://linkedin.com/in/ryan--hermes)
+
+- **Email**: ryanhermes@pm.me
+- **Website**: [ryanhermes.ca](https://ryanhermes.ca)
+- **LinkedIn**: [linkedin.com/in/ryan--hermes](https://linkedin.com/in/ryan--hermes)

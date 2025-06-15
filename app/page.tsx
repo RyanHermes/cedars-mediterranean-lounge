@@ -2,7 +2,6 @@ import Carousel from "@/components/Carousel";
 import path from "path";
 import fs from "fs";
 import Image from "next/image";
-import Menu from "@/components/Menu";
 import Link from "next/link";
 
 function getImages() {

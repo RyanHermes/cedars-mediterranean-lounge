@@ -56,7 +56,7 @@ export default function KidsZonePage() {
 
         <div className="bg-[#181818] rounded-xl border-2 border-[#8b4513] p-8 md:p-12 shadow-2xl">
           <h2 className="text-4xl font-semibold text-[#f4ce86] mb-10 text-center">
-            What's Happening?
+            What&apos;s Happening?
           </h2>
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {activities.map((activity) => (

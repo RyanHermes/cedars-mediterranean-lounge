@@ -8,7 +8,7 @@ export default function FestivalPage() {
         {/* Page Title and Introduction */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-[#f4ce86] mb-4">
-            St. Peter's Annual Festival
+            St. Peter&apos;s Annual Festival
           </h1>
           <p className="text-lg md:text-xl text-[#eae0d5] max-w-3xl mx-auto">
             Join us for a vibrant celebration of community, culture, and fun!
@@ -36,8 +36,8 @@ export default function FestivalPage() {
             Festival Highlights
           </h2>
           <p className="text-md text-[#eae0d5]">
-            Discover all the exciting activities and offerings at this year's
-            festival.
+            Discover all the exciting activities and offerings at this
+            year&apos;s festival.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -67,7 +67,8 @@ export default function FestivalPage() {
           <Link
             href="/festival/kids-zone"
             className="w-full h-48 flex items-center justify-center bg-[#181818] rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
-            legacyBehavior>
+            legacyBehavior
+          >
             <div className="text-center">
               <h3 className="text-xl font-semibold text-[#f4ce86]">
                 Kids Zone
