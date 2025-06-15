@@ -13,10 +13,11 @@ export default function June22EventPage() {
         <p className="text-lg sm:text-xl text-[#eae0d5] mb-8">
           More details about this exciting event will be posted here soon!
         </p>
-        <Link href="/" legacyBehavior>
-          <button className="w-full max-w-xs mx-auto mb-8 bg-[#f4ce86] text-[#181818] py-3 px-6 rounded-lg hover:bg-[#f0c164] transition-colors duration-300 text-lg font-semibold">
-            Back to Home
-          </button>
+        <Link
+          href="/"
+          className="w-full max-w-xs mx-auto mb-8 bg-[#f4ce86] text-[#181818] py-3 px-6 rounded-lg hover:bg-[#f0c164] transition-colors duration-300 text-lg font-semibold"
+        >
+          Back to Home
         </Link>
       </section>
       {/* You can add more specific content for this page later */}
