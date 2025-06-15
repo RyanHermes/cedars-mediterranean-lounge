@@ -3,6 +3,7 @@ import path from "path";
 import fs from "fs";
 import Image from "next/image";
 import Menu from "@/components/Menu";
+import Link from "next/link";
 
 function getImages() {
   const imagesDir = path.join(process.cwd(), "public/assets/images/carousel");
@@ -15,14 +16,6 @@ function getImages() {
 
 export default function Home() {
   const images = getImages();
-
-  // if (process.env.NODE_ENV === "production") {
-  //   return (
-  //     <div className="flex items-center justify-center min-h-screen text-2xl text-[#f4ce86] bg-[#121212]">
-  //       Under Construction 🚧
-  //     </div>
-  //   );
-  // }
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen font-sans bg-[#121212] text-[#eae0d5]">
@@ -97,9 +90,21 @@ export default function Home() {
               &rarr;
             </p>
           </a>
+          <Link href="/special-fundraising-event" legacyBehavior>
+            <a className="block bg-[#121212] p-6 rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300 md:col-span-2">
+              <h3 className="text-xl font-semibold text-[#f4ce86] mb-3">
+                Special Fundraising Event
+              </h3>
+              <p className="text-sm text-[#f4efe8]">
+                Join us for a special fundraising event.
+              </p>
+              <p className="text-sm text-[#f4ce86] mt-3">
+                Click to learn more &rarr;
+              </p>
+            </a>
+          </Link>
         </div>
       </section>
-      <Menu />
       <section id="gallery" className="w-full py-10 bg-[#121212] px-4">
         <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-[#f4ce86]">
           Gallery

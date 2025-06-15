@@ -5,6 +5,19 @@ export default function FestivalPage() {
   return (
     <div className="min-h-screen bg-[#121212] text-[#eae0d5] py-12 px-4">
       <div className="max-w-6xl mx-auto">
+        {/* Page Title and Introduction */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#f4ce86] mb-4">
+            St. Peter's Annual Festival
+          </h1>
+          <p className="text-lg md:text-xl text-[#eae0d5] max-w-3xl mx-auto">
+            Join us for a vibrant celebration of community, culture, and fun!
+            Our annual festival brings together amazing music, delicious food,
+            exciting games for kids, and much more. Explore what we have in
+            store for you this year.
+          </p>
+        </div>
+
         {/* Festival Poster */}
         <div className="w-full flex justify-center mb-12">
           <Image
@@ -18,37 +31,46 @@ export default function FestivalPage() {
         </div>
 
         {/* Festival Features Grid */}
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-semibold text-[#f4ce86]">
+            Festival Highlights
+          </h2>
+          <p className="text-md text-[#eae0d5]">
+            Discover all the exciting activities and offerings at this year's
+            festival.
+          </p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {/* Singers Button */}
-          <Link
-            href="/festival/singers"
-            className="w-full h-48 flex items-center justify-center bg-[#181818] rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
+          {/* Singers Button - Disabled */}
+          <div
+            aria-disabled="true"
+            className="w-full h-48 flex items-center justify-center bg-[#2a2a2a] rounded-lg border-2 border-[#5a5a5a] cursor-not-allowed opacity-60"
           >
             <div className="text-center">
-              <h3 className="text-xl font-semibold text-[#f4ce86]">Singers</h3>
-              <p className="text-sm text-[#eae0d5]">View Performers</p>
+              <h3 className="text-xl font-semibold text-[#a0a0a0]">Singers</h3>
+              <p className="text-sm text-[#a0a0a0]">TBD</p>
             </div>
-          </Link>
+          </div>
 
-          {/* Schedule Button */}
-          <Link
-            href="/festival/schedule"
-            className="w-full h-48 flex items-center justify-center bg-[#181818] rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
+          {/* Schedule Button - Disabled */}
+          <div
+            aria-disabled="true"
+            className="w-full h-48 flex items-center justify-center bg-[#2a2a2a] rounded-lg border-2 border-[#5a5a5a] cursor-not-allowed opacity-60"
           >
             <div className="text-center">
-              <h3 className="text-xl font-semibold text-[#f4ce86]">Schedule</h3>
-              <p className="text-sm text-[#eae0d5]">View Event Times</p>
+              <h3 className="text-xl font-semibold text-[#a0a0a0]">Schedule</h3>
+              <p className="text-sm text-[#a0a0a0]">TBD</p>
             </div>
-          </Link>
+          </div>
 
-          {/* Kids Games Button */}
+          {/* Kids Zone Button */}
           <Link
-            href="/festival/kids-games"
+            href="/festival/kids-zone"
             className="w-full h-48 flex items-center justify-center bg-[#181818] rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
           >
             <div className="text-center">
               <h3 className="text-xl font-semibold text-[#f4ce86]">
-                Kids Games
+                Kids Zone
               </h3>
               <p className="text-sm text-[#eae0d5]">
                 Fun activities for children
@@ -56,18 +78,18 @@ export default function FestivalPage() {
             </div>
           </Link>
 
-          {/* Food Menu Button */}
-          <Link
-            href="/festival/food-menu"
-            className="w-full h-48 flex items-center justify-center bg-[#181818] rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
+          {/* Food Menu Button - Disabled */}
+          <div
+            aria-disabled="true"
+            className="w-full h-48 flex items-center justify-center bg-[#2a2a2a] rounded-lg border-2 border-[#5a5a5a] cursor-not-allowed opacity-60"
           >
             <div className="text-center">
-              <h3 className="text-xl font-semibold text-[#f4ce86]">
+              <h3 className="text-xl font-semibold text-[#a0a0a0]">
                 Food Menu
               </h3>
-              <p className="text-sm text-[#eae0d5]">Special festival dishes</p>
+              <p className="text-sm text-[#a0a0a0]">TBD</p>
             </div>
-          </Link>
+          </div>
         </div>
 
         {/* Back Button */}

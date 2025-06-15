@@ -102,352 +102,257 @@ export default function Menu() {
           )}
         </div>
 
-        {/* Build Your Own Pizza */}
+        {/* Appetizers */}
         <div>
           <button
             className="w-full text-left text-lg font-bold text-[#f4ce86] bg-[#202020] py-3 px-4 rounded-lg focus:outline-none focus:ring focus:ring-[#f4ce86]"
-            onClick={() => toggleSection("buildYourOwn")}
+            onClick={() => toggleSection("appetizers")}
           >
-            Build Your Own
+            Appetizers
           </button>
-          {openSection === "buildYourOwn" && (
-            <div className="mt-3 px-4 space-y-4">
-              <p className="italic text-sm">
-                Choose any Toppings &ndash; $1.99 Each
-                <br />M 12&quot; &ndash; $9.99 | L 14&quot; &ndash; $11.99 | XL
-                16&quot; &ndash; $14.99
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-sm sm:text-base">
-                <div>
-                  <strong>Pick your size:</strong>
-                  <ul className="list-disc ml-5 mt-2">
-                    <li>M 12&quot; $9.99</li>
-                    <li>L 14&quot; $11.99</li>
-                    <li>XL 16&quot; $14.99</li>
-                  </ul>
-                </div>
-                <div>
-                  <strong>Pick your crust:</strong>
-                  <ul className="list-disc ml-5 mt-2">
-                    <li>Hand-tossed</li>
-                    <li>Thin crust</li>
-                    <li>Gluten-free</li>
-                  </ul>
-                </div>
-                <div>
-                  <strong>Pick your protein:</strong>
-                  <ul className="list-disc ml-5 mt-2">
-                    <li>Beef</li>
-                    <li>Ham</li>
-                    <li>Pepperoni</li>
-                    <li>Bacon</li>
-                    <li>Chicken</li>
-                    <li>Italian sausage</li>
-                    <li>Sujok</li>
-                    <li>Basturma</li>
-                  </ul>
-                </div>
-                <div>
-                  <strong>Pick your vegetables:</strong>
-                  <ul className="list-disc ml-5 mt-2">
-                    <li>Black olives</li>
-                    <li>Mushrooms</li>
-                    <li>Tomatoes</li>
-                    <li>Onions</li>
-                    <li>Green peppers</li>
-                    <li>Spinach</li>
-                  </ul>
-                </div>
-                <div>
-                  <strong>Pick your cheese:</strong>
-                  <ul className="list-disc ml-5 mt-2">
-                    <li>Mozzarella</li>
-                    <li>Feta</li>
-                    <li>Gobind (Paneer)</li>
-                    <li>Swiss, Cheddar & Parmesan</li>
-                    <li>Parmesan</li>
-                  </ul>
-                </div>
-                <div>
-                  <strong>Sauces:</strong>
-                  <ul className="list-disc ml-5 mt-2">
-                    <li>Jalape&ntilde;os</li>
-                    <li>Banana Hot pepper rings</li>
-                    <li>Chili flakes</li>
-                    <li>Pineapple</li>
-                    <li>Green olives</li>
-                    <li>Garlic</li>
-                    <li>Ranch Sauce</li>
-                    <li>Hot Sauce</li>
-                    <li>BBQ Sauce</li>
-                    <li>Honey Garlic</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Sides & More */}
-        <div>
-          <button
-            className="w-full text-left text-lg font-bold text-[#f4ce86] bg-[#202020] py-3 px-4 rounded-lg focus:outline-none focus:ring focus:ring-[#f4ce86]"
-            onClick={() => toggleSection("sides")}
-          >
-            Sides & More
-          </button>
-          {openSection === "sides" && (
+          {openSection === "appetizers" && (
             <ul className="mt-3 space-y-4 px-4">
-              <li>
-                <span className="font-bold">12- Fattoush salad:</span> Lettuce,
-                Cucumbers, Tomatoes, Radishes, Green Onions, Sumac sauce, Mint,
-                green pepper.
-                <br />
-                <span className="italic text-sm">
-                  Medium $6.99, Large $8.99
-                </span>
+              <li className="italic text-sm">
+                All appetizers are served with our signature dipping sauce.
               </li>
               <li>
-                <span className="font-bold">13- French Fries:</span>
-                <br />
-                <span className="italic text-sm">
-                  Medium $3.99, Large $5.99
-                </span>
+                <span className="font-bold">1- Hummus:</span> A creamy blend of
+                chickpeas, tahini, lemon juice, and garlic, served with warm
+                pita bread.
               </li>
               <li>
-                <span className="font-bold">14- Poutine:</span> Gravy sauce,
-                cheese
-                <br />
-                <span className="italic text-sm">
-                  Medium $4.99, Large $6.99
-                </span>
+                <span className="font-bold">2- Baba Ghanoush:</span> A smoky
+                eggplant dip mixed with tahini, olive oil, and spices, served
+                with pita.
               </li>
               <li>
-                <span className="font-bold">15- Chicken Wings:</span>
-                <br />
-                <span className="italic text-sm">
-                  10 Pcs (2 options of sauce) $12.99 | 20 Pcs (2 options of
-                  sauce) $23.99
-                </span>
+                <span className="font-bold">3- Stuffed Grape Leaves:</span>{" "}
+                Grape leaves stuffed with a mixture of rice, pine nuts, and
+                herbs, served with a side of tzatziki.
               </li>
               <li>
-                <span className="font-bold">16- Cedar&apos;s Burger:</span>{" "}
-                $13.99 (Burger fries and pop)
+                <span className="font-bold">4- Falafel:</span> Crispy chickpea
+                balls seasoned with herbs and spices, served with tahini sauce.
               </li>
               <li>
-                <span className="font-bold">17- Swiss mushrooms Burger:</span>{" "}
-                $14.99 Combo
+                <span className="font-bold">5- Spanakopita:</span> A flaky
+                pastry filled with spinach, feta cheese, and herbs, served with
+                tzatziki.
               </li>
               <li>
-                <span className="font-bold">18- Fish & Chips:</span> 1 piece
-                $15.99 | 2 pieces $20.99
+                <span className="font-bold">6- Samosa:</span> Crispy pastry
+                filled with spiced potatoes and peas, served with mint chutney.
               </li>
               <li>
-                <span className="font-bold">19- Falafel Wrap:</span> $7.99
-                (Dozen pieces $19.99)
+                <span className="font-bold">7- Calamari:</span> Tender calamari
+                rings lightly breaded and fried, served with marinara sauce.
               </li>
               <li>
-                <span className="font-bold">20- Hot Dog:</span> $4.99 (Pickles,
-                jalapeno, special chips flavor, mustered, mayo, ketchup)
+                <span className="font-bold">8- Bruschetta:</span> Grilled bread
+                topped with a mixture of diced tomatoes, basil, garlic, and
+                olive oil.
               </li>
               <li>
-                <span className="font-bold">21- Chicken Fajita Sub:</span>{" "}
-                $11.99
+                <span className="font-bold">9- Cheese Platter:</span> A
+                selection of fine cheeses served with nuts, dried fruits, and
+                honey.
               </li>
               <li>
-                <span className="font-bold">22- Daily Plate:</span> $23.99 one
-                side soup or salad
+                <span className="font-bold">10- Meat Platter:</span> A variety
+                of cured meats, including prosciutto, salami, and chorizo,
+                served with olives and pickles.
               </li>
             </ul>
           )}
         </div>
 
-        {/* Platters & Breakfast */}
+        {/* Salads */}
         <div>
           <button
             className="w-full text-left text-lg font-bold text-[#f4ce86] bg-[#202020] py-3 px-4 rounded-lg focus:outline-none focus:ring focus:ring-[#f4ce86]"
-            onClick={() => toggleSection("platters")}
+            onClick={() => toggleSection("salads")}
           >
-            Platter
+            Salads
           </button>
-          {openSection === "platters" && (
-            <div className="mt-3 space-y-6 px-4">
-              <ul className="space-y-4">
-                <li>
-                  <span className="font-bold">Fool:</span> $9.99
-                </li>
-                <li>
-                  <span className="font-bold">Hummus:</span> $8.99
-                </li>
-                <li>
-                  <span className="font-bold">Fatteh:</span> $11.99 (add meat
-                  $2)
-                </li>
-                <li>
-                  <span className="font-bold">Baba ghanouj:</span> $6.99
-                </li>
-                <li>
-                  <span className="font-bold">Balila:</span> $8.99
-                </li>
-                <li>
-                  <span className="font-bold">Labneh:</span> $7.99
-                </li>
-                <li>
-                  <span className="font-bold">Makanek:</span> $9.99
-                </li>
-                <li>
-                  <span className="font-bold">Sujuk:</span> $9.99
-                </li>
-                <li>
-                  <span className="font-bold">Spicy Potatoes:</span> $5.99
-                </li>
-                <li>
-                  <span className="font-bold">Falafel (5 Pcs):</span> $10.99
-                </li>
-              </ul>
-
-              <div>
-                <h3 className="font-bold mb-3">Eggs</h3>
-                <ul className="space-y-4">
-                  <li>
-                    <span className="font-bold">
-                      2 Eggs with Potatos, Bacon or Sausage:
-                    </span>{" "}
-                    $10.99 (extra egg $2)
-                  </li>
-                  <li>
-                    <span className="font-bold">
-                      3 Eggs with Sujuk or Basterma or Awarma:
-                    </span>{" "}
-                    $13.99
-                  </li>
-                  <li>
-                    <span className="font-bold">
-                      2 Eggs with tomatoes & onions:
-                    </span>{" "}
-                    $9.99
-                  </li>
-                  <li>
-                    <span className="font-bold">Omelette (Veggie):</span> $11.99
-                  </li>
-                </ul>
-              </div>
-            </div>
+          {openSection === "salads" && (
+            <ul className="mt-3 space-y-4 px-4">
+              <li className="italic text-sm">
+                Fresh, organic ingredients in every salad. Add grilled chicken
+                or shrimp for an extra charge.
+              </li>
+              <li>
+                <span className="font-bold">1- Greek Salad:</span> A classic
+                salad with tomatoes, cucumbers, olives, red onion, and feta
+                cheese, dressed with olive oil and oregano.
+              </li>
+              <li>
+                <span className="font-bold">2- Caesar Salad:</span> Romaine
+                lettuce, croutons, and parmesan cheese, tossed in a creamy
+                Caesar dressing.
+              </li>
+              <li>
+                <span className="font-bold">3- Garden Salad:</span> A mix of
+                fresh greens, cherry tomatoes, cucumber, and carrots, with your
+                choice of dressing.
+              </li>
+              <li>
+                <span className="font-bold">4- Spinach Salad:</span> Fresh
+                spinach, strawberries, almonds, and feta cheese, with a
+                poppyseed dressing.
+              </li>
+              <li>
+                <span className="font-bold">5- Cobb Salad:</span> A hearty salad
+                with mixed greens, grilled chicken, bacon, egg, avocado, and
+                blue cheese dressing.
+              </li>
+              <li>
+                <span className="font-bold">6- Taco Salad:</span> A Tex-Mex
+                favorite with seasoned beef, beans, cheese, lettuce, and salsa,
+                served in a crispy tortilla bowl.
+              </li>
+              <li>
+                <span className="font-bold">7- Antipasto Salad:</span> A
+                flavorful mix of cured meats, cheeses, olives, and peppers, with
+                a balsamic vinaigrette.
+              </li>
+              <li>
+                <span className="font-bold">8- Quinoa Salad:</span> A
+                protein-packed salad with quinoa, black beans, corn, bell
+                peppers, and a lime vinaigrette.
+              </li>
+              <li>
+                <span className="font-bold">9- Caprese Salad:</span> Fresh
+                mozzarella, tomatoes, and basil, drizzled with balsamic glaze
+                and olive oil.
+              </li>
+              <li>
+                <span className="font-bold">10- Waldorf Salad:</span> A
+                refreshing mix of apples, grapes, walnuts, and celery, in a
+                creamy dressing.
+              </li>
+            </ul>
           )}
         </div>
 
-        {/* Manakish */}
+        {/* Desserts */}
         <div>
           <button
             className="w-full text-left text-lg font-bold text-[#f4ce86] bg-[#202020] py-3 px-4 rounded-lg focus:outline-none focus:ring focus:ring-[#f4ce86]"
-            onClick={() => toggleSection("manakish")}
+            onClick={() => toggleSection("desserts")}
           >
-            Manakish
+            Desserts
           </button>
-          {openSection === "manakish" && (
-            <div className="mt-3 space-y-6 px-4">
-              <ul className="space-y-4">
-                <li>
-                  <span className="font-bold">Zaatar:</span> $2.99
-                </li>
-                <li>
-                  <span className="font-bold">Cheese or half half:</span> $4.99
-                </li>
-                <li>
-                  <span className="font-bold">Sujuk with cheese:</span> $4.99
-                </li>
-                <li>
-                  <span className="font-bold">Meat:</span> $4.99
-                </li>
-                <li>
-                  <span className="font-bold">Fatayer Spinach:</span> $1.99
-                </li>
-              </ul>
-
-              <div>
-                <h3 className="font-extrabold mb-3">Dozen</h3>
-                <ul className="space-y-4">
-                  <li>
-                    <span className="font-bold">
-                      Sanbousek /meat or cheese/ (one dozen):
-                    </span>{" "}
-                    $13.99
-                  </li>
-                  <li>
-                    <span className="font-bold">Meat Sfiha:</span> $13.99
-                  </li>
-                  <li>
-                    <span className="font-bold">Zaatar:</span> $12.99
-                  </li>
-                  <li>
-                    <span className="font-bold">
-                      Flayer /cheese or Spinach:
-                    </span>{" "}
-                    $13.99
-                  </li>
-                  <li>
-                    <span className="font-bold">Pizza Veggie:</span> $13.99
-                  </li>
-                </ul>
-              </div>
-            </div>
+          {openSection === "desserts" && (
+            <ul className="mt-3 space-y-4 px-4">
+              <li className="italic text-sm">
+                Indulge in our homemade desserts, crafted with the finest
+                ingredients.
+              </li>
+              <li>
+                <span className="font-bold">1- Baklava:</span> A sweet pastry
+                made of layers of filo dough, filled with chopped nuts and
+                sweetened with honey.
+              </li>
+              <li>
+                <span className="font-bold">2- Kunefe:</span> A delicious Middle
+                Eastern dessert made with thin noodle-like pastry, soaked in
+                sweet syrup and layered with cheese.
+              </li>
+              <li>
+                <span className="font-bold">3- Tiramisu:</span> An Italian
+                classic with layers of coffee-soaked ladyfingers, mascarpone
+                cheese, and cocoa.
+              </li>
+              <li>
+                <span className="font-bold">4- Cheesecake:</span> A rich and
+                creamy cheesecake with a graham cracker crust, served with a
+                fruit compote.
+              </li>
+              <li>
+                <span className="font-bold">5- Chocolate Mousse:</span> A light
+                and airy chocolate dessert, topped with whipped cream and
+                chocolate shavings.
+              </li>
+              <li>
+                <span className="font-bold">6- Panna Cotta:</span> A silky
+                Italian dessert made with sweetened cream and gelatin, often
+                served with berries.
+              </li>
+              <li>
+                <span className="font-bold">7- Crème Brûlée:</span> A rich
+                custard base topped with a layer of caramelized sugar.
+              </li>
+              <li>
+                <span className="font-bold">8- Gelato:</span> Italian-style ice
+                cream, creamier and denser than regular ice cream, in a variety
+                of flavors.
+              </li>
+              <li>
+                <span className="font-bold">9- Sorbet:</span> A dairy-free
+                frozen dessert made with fruit puree, water, and sugar.
+              </li>
+              <li>
+                <span className="font-bold">10- Rice Pudding:</span> A creamy
+                dessert made with rice, milk, sugar, and cinnamon.
+              </li>
+            </ul>
           )}
         </div>
 
-        {/* Sweets & Drinks */}
+        {/* Beverages */}
         <div>
           <button
             className="w-full text-left text-lg font-bold text-[#f4ce86] bg-[#202020] py-3 px-4 rounded-lg focus:outline-none focus:ring focus:ring-[#f4ce86]"
-            onClick={() => toggleSection("sweetsAndDrinks")}
+            onClick={() => toggleSection("beverages")}
           >
-            Lebanese Sweets & Drinks
+            Beverages
           </button>
-          {openSection === "sweetsAndDrinks" && (
-            <div className="mt-3 space-y-6 px-4">
-              <div>
-                <h3 className="font-extrabold mb-3">Lebanese Sweets</h3>
-                <ul className="space-y-4">
-                  <li>
-                    <span className="font-bold">
-                      Sweet Chocoba Banana & Strawberry:
-                    </span>{" "}
-                    $9.99
-                  </li>
-                  <li>
-                    <span className="font-bold">Nutella:</span> $6.99
-                  </li>
-                  <li>
-                    <span className="font-bold">Rice Pudding:</span> $2.99
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="font-extrabold mb-3">Drinks</h3>
-                <ul className="space-y-4">
-                  <li>
-                    <span className="font-bold">Lebanese Coffee (Rakwe):</span>{" "}
-                    $1.99
-                  </li>
-                  <li>
-                    <span className="font-bold">Canadian Coffee:</span> $1.99
-                  </li>
-                  <li>
-                    <span className="font-bold">Lebanese Tea:</span> $1.99 (Pot
-                    $9.99)
-                  </li>
-                  <li>
-                    <span className="font-bold">Water:</span> $1.99
-                  </li>
-                  <li>
-                    <span className="font-bold">Soft Drink:</span> $1.99
-                  </li>
-                  <li>
-                    <span className="font-bold">Juice/Aayran:</span> $3.99
-                  </li>
-                </ul>
-              </div>
-            </div>
+          {openSection === "beverages" && (
+            <ul className="mt-3 space-y-4 px-4">
+              <li className="italic text-sm">
+                Refreshing beverages to complement your meal.
+              </li>
+              <li>
+                <span className="font-bold">1- Soft Drinks:</span> A variety of
+                carbonated soft drinks.
+              </li>
+              <li>
+                <span className="font-bold">2- Iced Tea:</span> Freshly brewed
+                iced tea, sweetened or unsweetened.
+              </li>
+              <li>
+                <span className="font-bold">3- Lemonade:</span> A refreshing
+                blend of lemon juice, water, and sugar.
+              </li>
+              <li>
+                <span className="font-bold">4- Coffee:</span> Freshly brewed
+                coffee, regular or decaf.
+              </li>
+              <li>
+                <span className="font-bold">5- Tea:</span> A selection of fine
+                teas.
+              </li>
+              <li>
+                <span className="font-bold">6- Milkshakes:</span> Creamy
+                milkshakes in chocolate, vanilla, or strawberry.
+              </li>
+              <li>
+                <span className="font-bold">7- Smoothies:</span> Blended
+                beverages with fruit, yogurt, and milk or juice.
+              </li>
+              <li>
+                <span className="font-bold">8- Sparkling Water:</span>{" "}
+                Carbonated water, plain or flavored.
+              </li>
+              <li>
+                <span className="font-bold">9- Bottled Water:</span> Still or
+                sparkling bottled water.
+              </li>
+              <li>
+                <span className="font-bold">10- Energy Drinks:</span> A variety
+                of energy-boosting drinks.
+              </li>
+            </ul>
           )}
         </div>
       </div>
