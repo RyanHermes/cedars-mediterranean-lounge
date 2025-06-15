@@ -270,12 +270,6 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <footer className="w-full py-4 sm:py-6 text-center bg-[#8b4513] text-[#f4efe8]">
-        <p className="text-xs sm:text-sm">
-          © {new Date().getFullYear()} Cedar&apos;s Mediterranean Lounge. All
-          rights reserved.
-        </p>
-      </footer>
     </div>
   );
 }

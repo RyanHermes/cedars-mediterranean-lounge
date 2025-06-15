@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import AppHeader from "@/components/AppHeader"; // Import the new header component
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,12 +18,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
-        <link rel="apple-touch-icon" href="/apple-icon.png" />
-      </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <AppHeader /> {/* Use the new header component */}
+        <main className="flex-grow">{children}</main>
+        <footer className="bg-amber-700 text-white p-4 text-center">
+          <p>
+            &copy; {new Date().getFullYear()} Cedars Mediterranean Lounge. All
+            rights reserved.
+          </p>
+        </footer>
+      </body>
     </html>
   );
 }

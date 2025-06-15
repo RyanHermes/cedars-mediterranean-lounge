@@ -312,16 +312,6 @@ export default function CateringPage() {
           </a>
         </section>
       </main>
-
-      <footer className="w-full mt-12 py-4 sm:py-6 text-center bg-[#8b4513] text-[#f4efe8]">
-        <Link href="/" className="text-sm hover:underline">
-          ← Back to Homepage
-        </Link>
-        <p className="text-xs sm:text-sm mt-2">
-          © {new Date().getFullYear()} Cedar&apos;s Mediterranean Lounge. All
-          rights reserved.
-        </p>
-      </footer>
     </div>
   );
 }

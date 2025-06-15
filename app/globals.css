@@ -3,16 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a; /* Dark theme background by default */
+  --foreground: #ededed; /* Dark theme foreground by default */
 }
 
-@media (prefers-color-scheme: dark) {
+/* Optional: If you want to keep a light theme accessible via system preference, you can define it here */
+/*
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #171717;
   }
 }
+*/
 
 body {
   color: var(--foreground);
@@ -54,3 +57,25 @@ body {
   background: #f4ce86;
 }
 /* End of Swiper */
+
+/* Custom Hamburger Icon Colors */
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: white; /* Match header text color */
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: white; /* Ensure active state is also white */
+}
+
+/* Force hide hamburger button on md screens and up */
+@media (min-width: 768px) {
+  /* Corresponds to Tailwind's default 'md' breakpoint */
+  header .container button.hamburger {
+    /* Increased specificity */
+    display: none !important;
+  }
+}
