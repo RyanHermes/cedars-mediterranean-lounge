@@ -67,7 +67,6 @@ export default function FestivalPage() {
           <Link
             href="/festival/kids-zone"
             className="w-full h-48 flex items-center justify-center bg-[#181818] rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
-            legacyBehavior
           >
             <div className="text-center">
               <h3 className="text-xl font-semibold text-[#f4ce86]">
