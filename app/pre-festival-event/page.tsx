@@ -20,10 +20,12 @@ export default function PreFestivalEventPage() {
               <strong className="text-amber-400">Date:</strong> June 22, 2025
             </p>
             <p>
-              <strong className="text-amber-400">Time:</strong> [Specify Time Here, e.g., 12:00 PM - 4:00 PM]
+              <strong className="text-amber-400">Time:</strong> [Specify Time
+              Here, e.g., 12:00 PM - 4:00 PM]
             </p>
             <p>
-              <strong className="text-amber-400">Location:</strong> [Specify Location Here]
+              <strong className="text-amber-400">Location:</strong> [Specify
+              Location Here]
             </p>
           </div>
           <p className="text-lg mt-8 text-gray-300">

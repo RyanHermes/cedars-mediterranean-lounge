@@ -21,23 +21,27 @@ export default function AppHeader() {
       <div className="container mx-auto flex flex-nowrap justify-between items-center">
         <Link
           href="/"
-          className="flex items-center flex-shrink min-w-0 mr-2 overflow-hidden whitespace-nowrap text-ellipsis group"
-          onClick={closeMobileMenu}
-          legacyBehavior>
-          <div className="mr-3 flex-shrink-0">
-            <Image
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Arms_of_Lebanon.svg/640px-Arms_of_Lebanon.svg.png"
-              alt="Cedars Mediterranean Lounge Logo"
-              width={40}
-              height={40}
-              layout="intrinsic"
-              objectFit="contain"
-              className="transition-all duration-300 ease-in-out group-hover:scale-115 filter drop-shadow-[0_0_1px_rgba(255,255,255,0.7)] group-hover:drop-shadow-[0_0_2px_rgba(255,215,0,0.9)]"
-            />
-          </div>
-          <span className="text-xl sm:text-2xl font-bold transition-colors duration-300 group-hover:text-yellow-500">
-            Cedars Mediterranean Lounge
-          </span>
+          legacyBehavior
+        >
+          <a
+            className="flex items-center flex-shrink min-w-0 mr-2 overflow-hidden whitespace-nowrap text-ellipsis group"
+            onClick={closeMobileMenu}
+          >
+            <div className="mr-3 flex-shrink-0">
+              <Image
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Arms_of_Lebanon.svg/640px-Arms_of_Lebanon.svg.png"
+                alt="Cedars Mediterranean Lounge Logo"
+                width={40}
+                height={40}
+                layout="intrinsic"
+                objectFit="contain"
+                className="transition-all duration-300 ease-in-out group-hover:scale-115 filter drop-shadow-[0_0_1px_rgba(255,255,255,0.7)] group-hover:drop-shadow-[0_0_2px_rgba(255,215,0,0.9)]"
+              />
+            </div>
+            <span className="text-xl sm:text-2xl font-bold transition-colors duration-300 group-hover:text-yellow-500">
+              Cedars Mediterranean Lounge
+            </span>
+          </a>
         </Link>
         <button
           className={`block md:hidden hamburger hamburger--slider flex-shrink-0 ${
@@ -106,7 +110,8 @@ export default function AppHeader() {
                 href="/pre-festival-event"
                 className="bg-yellow-500 text-black text-sm md:text-base px-2 py-1 rounded hover:bg-yellow-400 block text-center md:inline whitespace-nowrap"
                 onClick={closeMobileMenu}
-                legacyBehavior>
+                legacyBehavior
+              >
                 <strong>Special Event: June 22nd!</strong>
               </Link>
             </li>
