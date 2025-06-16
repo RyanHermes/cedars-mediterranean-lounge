@@ -47,7 +47,7 @@ export default function AppHeader() {
               />
             </div>
             <span className="text-xl sm:text-2xl font-bold transition-colors duration-300 group-hover:text-yellow-500">
-              Cedars Mediterranean Lounge
+              Cedar&apos;s Mediterranean Lounge
             </span>
           </Link>
           <button
