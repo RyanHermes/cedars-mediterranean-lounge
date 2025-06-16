@@ -62,7 +62,7 @@ export default function Home() {
             <h3 className="text-xl font-semibold text-[#181818] mb-3">
               Festival Sneak Peek!
             </h3>
-            <p className="text-[#181818] mb-2">June 22nd</p>
+            <p className="text-[#181818] mb-2 font-bold">June 22nd</p>
             <p className="text-sm text-[#3a3a3a] mb-3">
               Get a sneak peek of the upcoming festival. Join us for fun
               activities and food samples!
