@@ -1,11 +1,12 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
 import Image from "next/image";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Carousel({ images }: { images: string[] }) {
   return (
@@ -17,8 +18,8 @@ export default function Carousel({ images }: { images: string[] }) {
       }}
       pagination={{ clickable: true, el: ".swiper-pagination" }}
       autoplay={{
-        delay: 3000, // 3 seconds delay between slides
-        disableOnInteraction: false, // Keep autoplay after interaction
+        delay: 3000,
+        disableOnInteraction: false,
       }}
       spaceBetween={30}
       slidesPerView={1}
@@ -37,11 +38,9 @@ export default function Carousel({ images }: { images: string[] }) {
         </SwiperSlide>
       ))}
 
-      {/* Custom Navigation Arrows */}
       <div className="swiper-button-prev custom-swiper-arrow"></div>
       <div className="swiper-button-next custom-swiper-arrow"></div>
 
-      {/* Custom Pagination */}
       <div className="swiper-pagination custom-swiper-dots"></div>
     </Swiper>
   );

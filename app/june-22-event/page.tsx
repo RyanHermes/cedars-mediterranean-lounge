@@ -20,7 +20,6 @@ export default function June22EventPage() {
           Back to Home
         </Link>
       </section>
-      {/* You can add more specific content for this page later */}
     </div>
   );
 }

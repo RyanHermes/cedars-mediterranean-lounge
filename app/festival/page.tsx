@@ -5,7 +5,6 @@ export default function FestivalPage() {
   return (
     <div className="min-h-screen bg-[#121212] text-[#eae0d5] py-12 px-4">
       <div className="max-w-6xl mx-auto">
-        {/* Page Title and Introduction */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-[#f4ce86] mb-4">
             St. Peter&apos;s Annual Festival
@@ -18,7 +17,6 @@ export default function FestivalPage() {
           </p>
         </div>
 
-        {/* Festival Poster */}
         <div className="w-full flex justify-center mb-12">
           <Image
             src="/assets/images/festival.jpeg"
@@ -30,7 +28,6 @@ export default function FestivalPage() {
           />
         </div>
 
-        {/* Festival Features Grid */}
         <div className="text-center mb-8">
           <h2 className="text-3xl font-semibold text-[#f4ce86]">
             Festival Highlights
@@ -41,7 +38,6 @@ export default function FestivalPage() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {/* Singers Button - Disabled */}
           <div
             aria-disabled="true"
             className="w-full h-48 flex items-center justify-center bg-[#2a2a2a] rounded-lg border-2 border-[#5a5a5a] cursor-not-allowed opacity-60"
@@ -52,7 +48,6 @@ export default function FestivalPage() {
             </div>
           </div>
 
-          {/* Schedule Button - Disabled */}
           <div
             aria-disabled="true"
             className="w-full h-48 flex items-center justify-center bg-[#2a2a2a] rounded-lg border-2 border-[#5a5a5a] cursor-not-allowed opacity-60"
@@ -63,7 +58,6 @@ export default function FestivalPage() {
             </div>
           </div>
 
-          {/* Kids Zone Button */}
           <Link
             href="/festival/kids-zone"
             className="w-full h-48 flex items-center justify-center bg-[#181818] rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
@@ -78,7 +72,6 @@ export default function FestivalPage() {
             </div>
           </Link>
 
-          {/* Food Menu Button - Disabled */}
           <div
             aria-disabled="true"
             className="w-full h-48 flex items-center justify-center bg-[#2a2a2a] rounded-lg border-2 border-[#5a5a5a] cursor-not-allowed opacity-60"
@@ -92,7 +85,6 @@ export default function FestivalPage() {
           </div>
         </div>
 
-        {/* Back Button */}
         <div className="mt-12 text-center">
           <Link
             href="/"

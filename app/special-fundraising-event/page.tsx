@@ -1,5 +1,6 @@
-import Menu from "@/components/Menu";
 import Link from "next/link";
+
+import Menu from "@/components/Menu";
 
 export default function SpecialFundraisingEventPage() {
   return (

@@ -1,8 +1,9 @@
-import Carousel from "@/components/Carousel";
-import path from "path";
 import fs from "fs";
 import Image from "next/image";
 import Link from "next/link";
+import path from "path";
+
+import Carousel from "@/components/Carousel";
 
 function getImages() {
   const imagesDir = path.join(process.cwd(), "public/assets/images/carousel");

@@ -22,7 +22,6 @@ export default function Menu() {
         ingredients and bold flavors.
       </p>
       <div className="max-w-5xl mx-auto text-left text-[#eae0d5] space-y-6">
-        {/* The Classics */}
         <div>
           <button
             className="w-full text-left text-lg font-bold text-[#f4ce86] bg-[#202020] py-3 px-4 rounded-lg focus:outline-none focus:ring focus:ring-[#f4ce86]"
@@ -102,7 +101,6 @@ export default function Menu() {
           )}
         </div>
 
-        {/* Appetizers */}
         <div>
           <button
             className="w-full text-left text-lg font-bold text-[#f4ce86] bg-[#202020] py-3 px-4 rounded-lg focus:outline-none focus:ring focus:ring-[#f4ce86]"
@@ -166,7 +164,6 @@ export default function Menu() {
           )}
         </div>
 
-        {/* Salads */}
         <div>
           <button
             className="w-full text-left text-lg font-bold text-[#f4ce86] bg-[#202020] py-3 px-4 rounded-lg focus:outline-none focus:ring focus:ring-[#f4ce86]"
@@ -234,7 +231,6 @@ export default function Menu() {
           )}
         </div>
 
-        {/* Desserts */}
         <div>
           <button
             className="w-full text-left text-lg font-bold text-[#f4ce86] bg-[#202020] py-3 px-4 rounded-lg focus:outline-none focus:ring focus:ring-[#f4ce86]"
@@ -299,7 +295,6 @@ export default function Menu() {
           )}
         </div>
 
-        {/* Beverages */}
         <div>
           <button
             className="w-full text-left text-lg font-bold text-[#f4ce86] bg-[#202020] py-3 px-4 rounded-lg focus:outline-none focus:ring focus:ring-[#f4ce86]"

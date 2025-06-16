@@ -1,7 +1,10 @@
+import "./globals.css";
+
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import AppHeader from "@/components/AppHeader"; // Import the new header component
+
+import AppHeader from "@/components/AppHeader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,8 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AppHeader /> {/* Use the new header component */}
-        <main className="flex-grow">{children}</main>
+        <AppHeader />
+        <main className="flex-grow">
+          {children}
+          <Analytics />
+        </main>
         <footer className="bg-amber-700 text-white p-4 text-center">
           <p>
             &copy; {new Date().getFullYear()} Cedars Mediterranean Lounge. All

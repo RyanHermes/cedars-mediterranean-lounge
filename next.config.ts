@@ -41,7 +41,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "upload.wikimedia.org", // Added wikimedia.org for the new logo
+        hostname: "upload.wikimedia.org",
         port: "",
         pathname: "/**",
       },

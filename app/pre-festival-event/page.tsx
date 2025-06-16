@@ -33,7 +33,6 @@ export default function PreFestivalEventPage() {
             will be fun activities, food samples, and information about the main
             event. Don&apos;t miss out on this exciting preview!
           </p>
-          {/* Add more details as needed, e.g., specific activities, guest appearances, etc. */}
         </div>
         <div className="mt-12 text-center">
           <Link

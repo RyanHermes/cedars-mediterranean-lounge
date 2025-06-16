@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
 import "hamburgers/dist/hamburgers.min.css";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function AppHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,16 +19,13 @@ export default function AppHeader() {
 
   return (
     <header className="relative">
-      {/* Overlay: now a direct child of the modified header, sibling to the content wrapper below */}
       {isMobileMenuOpen && (
         <div
           className="fixed inset-0 bg-black opacity-50 z-10 md:hidden"
           onClick={closeMobileMenu}
         ></div>
       )}
-      {/* NEW content wrapper: gets the original header's styling and a z-index to sit above the overlay */}
       <div className="bg-amber-700 text-white p-4 shadow-lg relative z-20">
-        {/* Original div.container and its children are now inside this new wrapper */}
         <div className="container mx-auto flex flex-nowrap justify-between items-center">
           <Link
             href="/"
@@ -69,7 +67,7 @@ export default function AppHeader() {
               md:flex md:items-center md:w-auto md:relative md:top-auto md:left-auto md:right-auto md:bg-transparent md:shadow-none md:z-auto md:p-0
               ${
                 isMobileMenuOpen
-                  ? "block absolute top-full left-0 w-full bg-amber-800 shadow-xl z-30 p-4" // MODIFIED: z-index from 20 to 30
+                  ? "block absolute top-full left-0 w-full bg-amber-800 shadow-xl z-30 p-4"
                   : "hidden pt-2 md:pt-0"
               }
             `}
