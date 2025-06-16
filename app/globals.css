@@ -59,15 +59,15 @@ body {
 /* End of Swiper */
 
 /* Custom Hamburger Icon Colors */
-.hamburger-inner,
-.hamburger-inner::before,
-.hamburger-inner::after {
+header .container button.hamburger .hamburger-inner,
+header .container button.hamburger .hamburger-inner::before,
+header .container button.hamburger .hamburger-inner::after {
   background-color: white; /* Match header text color */
 }
 
-.hamburger.is-active .hamburger-inner,
-.hamburger.is-active .hamburger-inner::before,
-.hamburger.is-active .hamburger-inner::after {
+header .container button.hamburger.is-active .hamburger-inner,
+header .container button.hamburger.is-active .hamburger-inner::before,
+header .container button.hamburger.is-active .hamburger-inner::after {
   background-color: white; /* Ensure active state is also white */
 }
 
