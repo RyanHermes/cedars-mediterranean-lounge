@@ -21,7 +21,7 @@ export default function AppHeader() {
     <header className="relative">
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-black opacity-50 z-10 md:hidden"
+          className="fixed inset-0 bg-black opacity-50 z-10 lg:hidden"
           onClick={closeMobileMenu}
         ></div>
       )}
@@ -30,7 +30,7 @@ export default function AppHeader() {
           <Link
             href="/"
             passHref
-            className="flex items-center flex-shrink min-w-0 mr-2 overflow-hidden whitespace-nowrap text-ellipsis group"
+            className="flex items-center flex-shrink min-w-0 mr-2 overflow-hidden group"
             onClick={closeMobileMenu}
           >
             <div className="mr-3 flex-shrink-0">
@@ -43,12 +43,12 @@ export default function AppHeader() {
                 style={{ objectFit: "contain" }}
               />
             </div>
-            <span className="text-xl sm:text-2xl font-bold transition-colors duration-300 group-hover:text-yellow-500">
+            <span className="truncate text-[clamp(1rem,3.5vw,1.625rem)] font-bold transition-colors duration-300 group-hover:text-yellow-500">
               Cedar&apos;s Mediterranean Lounge
             </span>
           </Link>
           <button
-            className={`block md:hidden hamburger hamburger--slider flex-shrink-0 ${
+            className={`block lg:hidden hamburger hamburger--slider flex-shrink-0 ${
               isMobileMenuOpen ? "is-active" : ""
             }`}
             type="button"
@@ -64,15 +64,15 @@ export default function AppHeader() {
           <nav
             id="navigation"
             className={`
-              md:flex md:items-center md:w-auto md:relative md:top-auto md:left-auto md:right-auto md:bg-transparent md:shadow-none md:z-auto md:p-0
+              lg:flex lg:items-center lg:w-auto lg:relative lg:top-auto lg:left-auto lg:right-auto lg:bg-transparent lg:shadow-none lg:z-auto lg:p-0 lg:pt-0
               ${
                 isMobileMenuOpen
                   ? "block absolute top-full left-0 w-full bg-amber-800 shadow-xl z-30 p-4"
-                  : "hidden pt-2 md:pt-0"
+                  : "hidden pt-2"
               }
             `}
           >
-            <ul className="flex flex-col md:flex-row md:items-center md:space-x-2 space-y-2 md:space-y-0">
+            <ul className="flex flex-col lg:flex-row lg:items-center lg:space-x-2 space-y-2 lg:space-y-0">
               <li>
                 <Link
                   href="/"

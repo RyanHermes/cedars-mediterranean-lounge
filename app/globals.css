@@ -71,9 +71,9 @@ body {
   background-color: white; /* Ensure active state is also white */
 }
 
-/* Force hide hamburger button on md screens and up */
-@media (min-width: 768px) {
-  /* Corresponds to Tailwind's default 'md' breakpoint */
+/* Force hide hamburger button on lg screens and up */
+@media (min-width: 1024px) {
+  /* Corresponds to Tailwind's default 'lg' breakpoint */
   header .container button.hamburger {
     /* Increased specificity */
     display: none !important;
