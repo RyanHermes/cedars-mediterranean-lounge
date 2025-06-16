@@ -41,9 +41,8 @@ export default function AppHeader() {
                 alt="Cedars Mediterranean Lounge Logo"
                 width={40}
                 height={40}
-                layout="intrinsic"
-                objectFit="contain"
                 className="transition-all duration-300 ease-in-out group-hover:scale-115 filter drop-shadow-[0_0_1px_rgba(255,255,255,0.7)] group-hover:drop-shadow-[0_0_2px_rgba(255,215,0,0.9)]"
+                style={{ objectFit: "contain" }}
               />
             </div>
             <span className="text-xl sm:text-2xl font-bold transition-colors duration-300 group-hover:text-yellow-500">

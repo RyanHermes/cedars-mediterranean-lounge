@@ -12,7 +12,7 @@ export default function SpecialFundraisingEventPage() {
           Join us for a special fundraising event to support our community. All
           proceeds from this menu will go towards the cause.
         </p>
-        <Link href="/" legacyBehavior>
+        <Link href="/">
           <button className="mb-8 bg-[#f4ce86] text-[#181818] py-2 px-4 rounded-lg hover:bg-[#f0c164] transition-colors duration-300">
             Back to Home
           </button>
