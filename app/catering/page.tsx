@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function CateringPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen font-sans bg-[#121212] text-[#eae0d5] px-4 py-8">

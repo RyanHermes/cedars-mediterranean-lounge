@@ -31,7 +31,7 @@ export default function PreFestivalEventPage() {
           <p className="text-lg mt-8 text-gray-300">
             Come and experience a taste of what the festival has to offer. There
             will be fun activities, food samples, and information about the main
-            event. Don't miss out on this exciting preview!
+            event. Don&apos;t miss out on this exciting preview!
           </p>
           {/* Add more details as needed, e.g., specific activities, guest appearances, etc. */}
         </div>
