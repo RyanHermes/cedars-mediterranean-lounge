@@ -32,7 +32,7 @@ export default function SingersPage() {
     const timers = singers.map((singer, index) =>
       setTimeout(() => {
         setVisibleSingers((prev) => [...prev, singer.name]);
-      }, index * 150),
+      }, index * 150)
     );
 
     return () => timers.forEach(clearTimeout);
