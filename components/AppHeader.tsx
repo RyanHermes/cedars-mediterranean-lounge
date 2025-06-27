@@ -109,16 +109,6 @@ export default function AppHeader() {
                   Fundraising
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/june-22-event"
-                  passHref
-                  className="bg-yellow-500 text-black text-sm md:text-base px-2 py-1 rounded hover:bg-yellow-400 block text-center md:inline whitespace-nowrap"
-                  onClick={closeMobileMenu}
-                >
-                  <strong>Special Event: June 22nd</strong>
-                </Link>
-              </li>
             </ul>
           </nav>
         </div>

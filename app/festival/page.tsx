@@ -38,23 +38,25 @@ export default function FestivalPage() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div
-            aria-disabled="true"
-            className="w-full h-48 flex items-center justify-center bg-[#2a2a2a] rounded-lg border-2 border-[#5a5a5a] cursor-not-allowed opacity-60"
+          {/* Singers Button */}
+          <Link
+            href="/festival/singers"
+            className="w-full h-48 flex items-center justify-center bg-[#181818] rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
           >
             <div className="text-center">
-              <h3 className="text-xl font-semibold text-[#a0a0a0]">Singers</h3>
-              <p className="text-sm text-[#a0a0a0]">TBD</p>
+              <h3 className="text-xl font-semibold text-[#f4ce86]">Singers</h3>
+              <p className="text-sm text-[#eae0d5]">Featured Artists</p>
+              <p className="text-sm text-[#f4ce86] mt-2">
+                Click to see the lineup &rarr;
+              </p>
             </div>
-          </div>
+          </Link>
 
-          <div
-            aria-disabled="true"
-            className="w-full h-48 flex items-center justify-center bg-[#2a2a2a] rounded-lg border-2 border-[#5a5a5a] cursor-not-allowed opacity-60"
-          >
+          {/* Schedule Button */}
+          <div className="w-full h-48 flex items-center justify-center bg-[#181818] rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300">
             <div className="text-center">
-              <h3 className="text-xl font-semibold text-[#a0a0a0]">Schedule</h3>
-              <p className="text-sm text-[#a0a0a0]">TBD</p>
+              <h3 className="text-xl font-semibold text-[#f4ce86]">Schedule</h3>
+              <p className="text-sm text-[#eae0d5]">11:00 AM - 11:00 PM</p>
             </div>
           </div>
 
@@ -69,20 +71,27 @@ export default function FestivalPage() {
               <p className="text-sm text-[#eae0d5]">
                 Fun activities for children
               </p>
+              <p className="text-sm text-[#f4ce86] mt-2">
+                Click to view more &rarr;
+              </p>
             </div>
           </Link>
 
-          <div
-            aria-disabled="true"
-            className="w-full h-48 flex items-center justify-center bg-[#2a2a2a] rounded-lg border-2 border-[#5a5a5a] cursor-not-allowed opacity-60"
+          {/* Food Menu Button */}
+          <Link
+            href="/festival/menu"
+            className="w-full h-48 flex items-center justify-center bg-[#181818] rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
           >
             <div className="text-center">
-              <h3 className="text-xl font-semibold text-[#a0a0a0]">
+              <h3 className="text-xl font-semibold text-[#f4ce86]">
                 Food Menu
               </h3>
-              <p className="text-sm text-[#a0a0a0]">TBD</p>
+              <p className="text-sm text-[#eae0d5]">Delicious festival food</p>
+              <p className="text-sm text-[#f4ce86] mt-2">
+                Click to view menu &rarr;
+              </p>
             </div>
-          </div>
+          </Link>
         </div>
 
         <div className="mt-12 text-center">

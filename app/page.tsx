@@ -56,23 +56,6 @@ export default function Home() {
           year.
         </p>
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Link
-            href="/june-22-event"
-            className="block bg-[#f4ce86] p-6 rounded-lg border-2 border-[#8b4513] hover:border-white hover:scale-105 transition-all duration-300 md:col-span-2"
-          >
-            <h3 className="text-xl font-semibold text-[#181818] mb-3">
-              Festival Sneak Peek!
-            </h3>
-            <p className="text-[#181818] mb-2 font-bold">June 22nd</p>
-            <p className="text-sm text-[#3a3a3a] mb-3">
-              Get a sneak peek of the upcoming festival. Join us for fun
-              activities and food samples!
-            </p>
-            <p className="text-sm text-[#181818] font-semibold mt-3">
-              Click for details &rarr;
-            </p>
-          </Link>
-
           <a
             href="/festival"
             className="block bg-[#121212] p-6 rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
