@@ -55,8 +55,8 @@ export default function Home() {
           Join us for special events and cultural celebrations throughout the
           year.
         </p>
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-          <a
+        <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-6">
+          {/* <a
             href="/festival"
             className="block bg-[#121212] p-6 rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
           >
@@ -71,10 +71,10 @@ export default function Home() {
             <p className="text-sm text-[#f4ce86] mt-3">
               Click to view festival details &rarr;
             </p>
-          </a>
+          </a> */}
           <a
             href="/catering"
-            className="block bg-[#121212] p-6 rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
+            className="block w-full max-w-md bg-[#121212] p-6 rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
           >
             <h3 className="text-xl font-semibold text-[#f4ce86] mb-3">
               Catering Services
@@ -90,7 +90,23 @@ export default function Home() {
               &rarr;
             </p>
           </a>
-          <Link
+          <a
+            href="/hall-rental"
+            className="block w-full max-w-md bg-[#121212] p-6 rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
+          >
+            <h3 className="text-xl font-semibold text-[#f4ce86] mb-3">
+              Hall Rental
+            </h3>
+            <p className="text-[#eae0d5] mb-2">Host your event with us</p>
+            <p className="text-sm text-[#f4efe8] mb-3">
+              Our beautiful hall is available for private events, parties, and
+              gatherings. Contact us to book your date!
+            </p>
+            <p className="text-sm text-[#f4ce86] mt-3">
+              Click for more details &rarr;
+            </p>
+          </a>
+          {/* <Link
             href="/special-fundraising-event"
             className="block bg-[#121212] p-6 rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300 md:col-span-2"
           >
@@ -103,7 +119,7 @@ export default function Home() {
             <p className="text-sm text-[#f4ce86] mt-3">
               Click to learn more &rarr;
             </p>
-          </Link>
+          </Link> */}
         </div>
       </section>
       <section id="gallery" className="w-full py-10 bg-[#121212] px-4">
@@ -146,35 +162,23 @@ export default function Home() {
         className="w-full py-10 bg-[#181818] px-4 text-center"
       >
         <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-[#f4ce86]">
-          Hours of Operation
+          Ordering Hours
         </h2>
         <p className="text-sm sm:text-base text-[#eae0d5] mb-8">
-          Join us during our opening hours for a delightful Mediterranean
-          experience.
+          Craving Mediterranean flavors? We are ready to serve you around the
+          clock.
         </p>
         <div className="max-w-md mx-auto bg-[#202020] rounded-lg p-6 border-2 border-[#8b4513] shadow-lg">
-          <div className="grid grid-cols-2 gap-3 text-[#f4efe8]">
-            <div className="text-right font-semibold">Sunday:</div>
-            <div className="text-left text-[#f4ce86]">Closed</div>
-
-            <div className="text-right font-semibold">Monday:</div>
-            <div className="text-left text-[#f4ce86]">Closed</div>
-
-            <div className="text-right font-semibold">Tuesday:</div>
-            <div className="text-left text-[#f4ce86]">Closed</div>
-
-            <div className="text-right font-semibold">Wednesday:</div>
-            <div className="text-left text-[#f4ce86]">Closed</div>
-
-            <div className="text-right font-semibold">Thursday:</div>
-            <div className="text-left text-[#f4ce86]">9 a.m. – 6 p.m.</div>
-
-            <div className="text-right font-semibold">Friday:</div>
-            <div className="text-left text-[#f4ce86]">9 a.m. – 6 p.m.</div>
-
-            <div className="text-right font-semibold">Saturday:</div>
-            <div className="text-left text-[#f4ce86]">9 a.m. – 6 p.m.</div>
+          <div className="text-center text-xl font-bold text-[#f4ce86]">
+            Open for Ordering 24/7
           </div>
+          <p className="text-[#f4efe8] mt-2">
+            Breakfast, Lunch, Dinner, or Late Night Snack - we&apos;ve got you
+            covered!
+          </p>
+          <p className="text-[#f4ce86] mt-4 font-semibold">
+            Call us at: (226) 739-7240
+          </p>
         </div>
       </section>
       <section id="videos" className="w-full py-10 px-4 bg-[#181818]">

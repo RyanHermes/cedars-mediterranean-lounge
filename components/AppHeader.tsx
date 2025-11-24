@@ -93,6 +93,15 @@ export default function AppHeader() {
               </li>
               <li>
                 <Link
+                  href="/hall-rental"
+                  className="hover:text-gray-300 block px-2 py-1"
+                  onClick={closeMobileMenu}
+                >
+                  Hall Rental
+                </Link>
+              </li>
+              {/* <li>
+                <Link
                   href="/festival"
                   className="hover:text-gray-300 block px-2 py-1"
                   onClick={closeMobileMenu}
@@ -108,7 +117,7 @@ export default function AppHeader() {
                 >
                   Fundraising
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </div>
