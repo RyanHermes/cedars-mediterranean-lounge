@@ -1,6 +1,5 @@
 import fs from "fs";
 import Image from "next/image";
-import Link from "next/link";
 import path from "path";
 
 import Carousel from "@/components/Carousel";
