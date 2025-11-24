@@ -13,6 +13,7 @@ function getImages() {
     .map((file) => `/assets/images/carousel/${file}`);
 }
 
+// Home page component
 export default function Home() {
   const images = getImages();
 
