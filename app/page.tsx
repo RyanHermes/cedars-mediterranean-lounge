@@ -2,7 +2,12 @@ import fs from "fs";
 import Image from "next/image";
 import path from "path";
 
-import Carousel from "@/components/Carousel";
+import Card from "@/components/Card";
+import GalleryMosaic from "@/components/GalleryMosaic";
+
+import { FESTIVAL, isFestivalActive } from "./festival/festival-config";
+
+export const revalidate = 86400;
 
 function getImages() {
   const imagesDir = path.join(process.cwd(), "public/assets/images/carousel");
@@ -15,186 +20,232 @@ function getImages() {
 
 export default function Home() {
   const images = getImages();
+  const showFestival = isFestivalActive();
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen font-sans bg-[#121212] text-[#eae0d5]">
-      <section className="relative w-full py-16 text-center bg-gradient-to-b from-[#181818] to-[#3a5a40] px-4">
-        <div className="absolute inset-0 z-0 bg-cover bg-center opacity-10"></div>
-        <div className="relative z-10">
-          <h1 className="text-5xl sm:text-6xl font-extrabold text-[#f4ce86] drop-shadow-lg mb-4">
+    <>
+      {/* Hero */}
+      <section className="relative px-4 pt-20 pb-24 sm:pt-28 sm:pb-32 text-center overflow-hidden">
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-b from-ink-900 via-ink to-olive-deep/60"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"
+        />
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <div className="mx-auto mb-10 w-64 sm:w-80 bg-bone rounded-2xl ring-1 ring-gold/30 shadow-glow p-6">
+            <Image
+              src="/assets/images/logo.JPG"
+              alt="Cedar's Mediterranean Breakfast Lounge"
+              width={800}
+              height={600}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
+          <p className="text-gold text-xs uppercase tracking-[0.25em] mb-4">
+            Windsor, Ontario
+          </p>
+          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl text-gold tracking-tight leading-[1.05] mb-6">
             Cedar&apos;s Mediterranean Lounge
           </h1>
-          <p className="text-lg sm:text-xl text-[#f4efe8]">
+          <p className="text-lg sm:text-xl text-bone-muted leading-relaxed max-w-2xl mx-auto">
             Authentic flavors, cozy ambiance, and unforgettable moments.
           </p>
         </div>
-        <div className="relative z-10 flex items-center justify-center mx-auto mt-8">
-          <div className="w-60 h-60 sm:w-72 sm:h-72 bg-gradient-to-b from-[#556b2f] to-[#3a5a40] rounded-full flex items-center justify-center shadow-lg border-4 border-[#8b4513]">
-            <div className="w-56 h-56 sm:w-68 sm:h-68 bg-white rounded-full flex items-center justify-center overflow-hidden">
-              <Image
-                src="/assets/images/logo.JPG"
-                alt="Cedar's Mediterranean Lounge Logo"
-                width={250}
-                height={250}
-                className="object-contain scale-90 w-full h-full"
-                priority
-              />
-            </div>
-          </div>
-        </div>
       </section>
-      <section
-        id="events"
-        className="w-full py-10 bg-[#181818] px-4 text-center"
-      >
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-[#f4ce86]">
-          Events
-        </h2>
-        <p className="text-sm sm:text-base text-[#eae0d5] mb-6">
-          Join us for special events and cultural celebrations throughout the
-          year.
-        </p>
-        <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-6">
-          <a
-            href="/catering"
-            className="block w-full max-w-md bg-[#121212] p-6 rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
-          >
-            <h3 className="text-xl font-semibold text-[#f4ce86] mb-3">
-              Catering Services
-            </h3>
-            <p className="text-[#eae0d5] mb-2">Available for your events</p>
-            <p className="text-sm text-[#f4efe8] mb-3">
+
+      {/* Events */}
+      <section id="events" className="px-4 py-20 sm:py-24 bg-ink">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl sm:text-4xl text-gold tracking-tight mb-4">
+              Events
+            </h2>
+            <p className="text-bone-muted max-w-2xl mx-auto">
+              Join us for special events and cultural celebrations throughout
+              the year.
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-6">
+            <Card
+              href="/catering"
+              title="Catering Services"
+              tagline="Available for your events"
+              cta="View catering menu"
+            >
               Bring the taste of Cedar&apos;s to your special occasions. We
               offer a wide range of catering options for parties, gatherings,
               and corporate events.
-            </p>
-            <p className="text-sm text-[#f4ce86] mt-3">
-              Click for full catering menu and to discuss your event needs!
-              &rarr;
-            </p>
-          </a>
-          <a
-            href="/hall-rental"
-            className="block w-full max-w-md bg-[#121212] p-6 rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
-          >
-            <h3 className="text-xl font-semibold text-[#f4ce86] mb-3">
-              Hall Rental
-            </h3>
-            <p className="text-[#eae0d5] mb-2">Host your event with us</p>
-            <p className="text-sm text-[#f4efe8] mb-3">
+            </Card>
+            <Card
+              href="/hall-rental"
+              title="Hall Rental"
+              tagline="Host your event with us"
+              cta="See details"
+            >
               Our beautiful hall is available for private events, parties, and
-              gatherings. Contact us to book your date!
-            </p>
-            <p className="text-sm text-[#f4ce86] mt-3">
-              Click for more details &rarr;
-            </p>
-          </a>
+              gatherings. Contact us to book your date.
+            </Card>
+            {showFestival && (
+              <Card
+                href="/festival"
+                title={FESTIVAL.shortName}
+                tagline={FESTIVAL.dateRange}
+                cta="View festival"
+              >
+                Join the {FESTIVAL.name} &mdash; Lebanese food, live music, folk
+                dance, kids games, and more.
+              </Card>
+            )}
+          </div>
         </div>
       </section>
-      <section id="gallery" className="w-full py-10 bg-[#121212] px-4">
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-[#f4ce86]">
-          Gallery
-        </h2>
-        <p className="text-sm sm:text-base text-[#eae0d5] mb-6">
-          Explore our ambiance and culinary delights.
-        </p>
-        <Carousel images={images} />
-      </section>
-      <section
-        id="location"
-        className="w-full py-10 bg-[#181818] px-4 text-center"
-      >
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-[#f4ce86]">
-          Our Location
-        </h2>
-        <p className="text-sm sm:text-base text-[#eae0d5] mb-6">
-          Visit us at our cozy location in Windsor.
-        </p>
-        <p className="text-sm sm:text-base text-[#eae0d5] mb-6">
-          Enter through the parking lot door.
-        </p>
-        <div className="relative overflow-hidden rounded-lg shadow-lg border-2 border-[#8b4513]">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.242163168727!2d-83.03321532444136!3d42.29617897919061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2b85f50dd0d1%3A0xa1f5c8df1fbe52af!2s166%20Tecumseh%20Rd%20W%2C%20Windsor%2C%20ON%20N8X%201E9%2C%20Canada!5e0!3m2!1sen!2sus!4v1674192318769!5m2!1sen!2sus"
-            width="100%"
-            height="400"
-            style={{ border: 0 }}
-            allowFullScreen={true}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="w-full h-96"
-          ></iframe>
+
+      {/* Gallery */}
+      <section id="gallery" className="px-4 py-20 sm:py-24 bg-ink-900/50">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl sm:text-4xl text-gold tracking-tight mb-4">
+              Gallery
+            </h2>
+            <p className="text-bone-muted max-w-2xl mx-auto">
+              A glimpse of our ambiance and culinary delights. Tap any photo to
+              browse the full gallery.
+            </p>
+          </div>
+          <GalleryMosaic images={images} />
         </div>
       </section>
+
+      {/* Location */}
+      <section id="location" className="px-4 py-20 sm:py-24 bg-ink">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl sm:text-4xl text-gold tracking-tight mb-4">
+              Visit Us
+            </h2>
+            <p className="text-bone-muted max-w-2xl mx-auto">
+              Find us in Windsor &mdash; enter through the parking lot door.
+            </p>
+          </div>
+          <div className="overflow-hidden rounded-2xl ring-1 ring-bone/10">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.242163168727!2d-83.03321532444136!3d42.29617897919061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2b85f50dd0d1%3A0xa1f5c8df1fbe52af!2s166%20Tecumseh%20Rd%20W%2C%20Windsor%2C%20ON%20N8X%201E9%2C%20Canada!5e0!3m2!1sen!2sus!4v1674192318769!5m2!1sen!2sus"
+              title="Map to Cedar's Mediterranean Lounge"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-96"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Hours */}
       <section
         id="hours"
-        className="w-full py-10 bg-[#181818] px-4 text-center"
+        className="px-4 py-20 sm:py-24 bg-ink-900/50 text-center"
       >
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-[#f4ce86]">
-          Ordering Hours
-        </h2>
-        <p className="text-sm sm:text-base text-[#eae0d5] mb-8">
-          Craving Mediterranean flavors? We are ready to serve you around the
-          clock.
-        </p>
-        <div className="max-w-md mx-auto bg-[#202020] rounded-lg p-6 border-2 border-[#8b4513] shadow-lg">
-          <div className="text-center text-xl font-bold text-[#f4ce86]">
-            Open for Ordering 24/7
+        <div className="max-w-2xl mx-auto">
+          <h2 className="font-display text-3xl sm:text-4xl text-gold tracking-tight mb-4">
+            Open Daily
+          </h2>
+          <p className="text-bone-muted mb-10">
+            From breakfast through late night &mdash; we&apos;re ready when you
+            are.
+          </p>
+          <div className="bg-ink p-8 rounded-2xl ring-1 ring-gold/30 shadow-glow">
+            <p className="font-display text-2xl sm:text-3xl text-gold mb-3">
+              Breakfast · Lunch · Dinner · Late Night
+            </p>
+            <p className="text-bone leading-relaxed mb-6">
+              Pop in, call ahead, or order delivery.
+            </p>
+            <a
+              href="tel:+12267397240"
+              className="inline-block bg-gold text-ink font-semibold px-8 py-3 rounded-full shadow-md hover:bg-gold-hover transition-colors"
+            >
+              Call (226) 739-7240
+            </a>
           </div>
-          <p className="text-[#f4efe8] mt-2">
-            Breakfast, Lunch, Dinner, or Late Night Snack - we&apos;ve got you
-            covered!
-          </p>
-          <p className="text-[#f4ce86] mt-4 font-semibold">
-            Call us at: (226) 739-7240
-          </p>
         </div>
       </section>
-      <section id="videos" className="w-full py-10 px-4 bg-[#181818]">
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-[#f4ce86] text-center">
-          Our Story
-        </h2>
-        <p className="text-sm sm:text-base text-[#eae0d5] mb-8 text-center max-w-2xl mx-auto">
-          Experience the heart and soul of Cedar&apos;s Mediterranean Lounge
-          through our videos. From our authentic cooking process to the warm
-          atmosphere, get a glimpse of what makes us special.
-        </p>
-        <div className="max-w-[360px] mx-auto">
-          <video
-            className="w-full h-auto rounded-lg border-2 border-[#8b4513]"
-            controls
-            style={{ aspectRatio: "9/16" }}
-          >
-            <source src="/assets/videos/video1.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+
+      {/* Story / Video */}
+      <section id="story" className="px-4 py-20 sm:py-24 bg-ink">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl sm:text-4xl text-gold tracking-tight mb-4">
+              Our Story
+            </h2>
+            <p className="text-bone-muted max-w-2xl mx-auto">
+              From the kitchen to the dining room, a glimpse of what makes
+              Cedar&apos;s special.
+            </p>
+          </div>
+          <div className="max-w-[360px] mx-auto rounded-2xl overflow-hidden ring-1 ring-bone/10 shadow-glow">
+            <video
+              className="w-full h-auto block"
+              controls
+              style={{ aspectRatio: "9/16" }}
+            >
+              <source src="/assets/videos/video1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </section>
+
+      {/* Contact */}
       <section
         id="contact"
-        className="w-full py-10 bg-[#121212] px-4 text-center"
+        className="px-4 py-20 sm:py-24 bg-ink-900/50 text-center"
       >
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-[#f4ce86]">
-          Contact Us
-        </h2>
-        <p className="text-sm sm:text-base text-[#eae0d5] mb-4">
-          We&apos;d love to hear from you. Reach out or visit us!
-        </p>
-        <div className="text-sm sm:text-base text-[#f4efe8] mb-6">
-          <p className="mb-2">📍 166 Tecumseh Rd W, Windsor, ON N8X 1E9</p>
-          <p className="mb-2">📞 (226) 739-7240</p>
-          <p>📧 cedar.m.b.lounge@gmail.com</p>
-        </div>
-        <div className="flex justify-center">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="font-display text-3xl sm:text-4xl text-gold tracking-tight mb-4">
+            Stay in Touch
+          </h2>
+          <p className="text-bone-muted mb-10">
+            We&apos;d love to hear from you. Reach out or follow along.
+          </p>
+          <ul className="space-y-3 text-bone mb-10">
+            <li className="flex items-center justify-center gap-2">
+              <span aria-hidden>📍</span> 166 Tecumseh Rd W, Windsor, ON N8X 1E9
+            </li>
+            <li className="flex items-center justify-center gap-2">
+              <span aria-hidden>📞</span>{" "}
+              <a
+                href="tel:+12267397240"
+                className="hover:text-gold transition-colors"
+              >
+                (226) 739-7240
+              </a>
+            </li>
+            <li className="flex items-center justify-center gap-2">
+              <span aria-hidden>📧</span>{" "}
+              <a
+                href="mailto:cedar.m.b.lounge@gmail.com"
+                className="hover:text-gold transition-colors"
+              >
+                cedar.m.b.lounge@gmail.com
+              </a>
+            </li>
+          </ul>
           <a
             href="https://www.facebook.com/cedarsmediterraneanlounge"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#1877F2] text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#1877F2] text-white font-semibold rounded-full shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all"
           >
             <Image
               src="/assets/icons/facebook-logo.png"
-              alt="Facebook"
+              alt=""
               width={24}
               height={24}
               className="w-6 h-6"
@@ -203,48 +254,51 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <section
-        id="delivery"
-        className="w-full py-10 bg-[#121212] px-4 text-center"
-      >
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-[#f4ce86]">
-          Order Delivery
-        </h2>
-        <p className="text-sm sm:text-base text-[#eae0d5] mb-6">
-          Enjoy your favorite dishes from the comfort of your home! Order now
-          through our trusted delivery partners.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-6 justify-center">
-          <a
-            href="https://www.ubereats.com/ca/store/cedars-mediterranean-breakfast-lounge/orOBLU8pSLqgCwry8eLenQ"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#05A357] text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300"
-          >
-            <Image
-              src="/assets/icons/ubereats-logo.svg"
-              alt="Uber Eats"
-              width={24}
-              height={24}
-              className="w-6 h-6"
-            />
-            Order on Uber Eats
-          </a>
-          <a
-            href="https://www.doordash.com/store/cedar's-mediterranean-breakfast-lounge-windsor-32283435/"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-[#ef3b24] font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300"
-          >
-            <Image
-              src="/assets/icons/doordash-logo.svg"
-              alt="DoorDash"
-              width={24}
-              height={24}
-              className="w-6 h-6"
-            />
-            Order on DoorDash
-          </a>
+
+      {/* Delivery */}
+      <section id="delivery" className="px-4 py-20 sm:py-24 bg-ink text-center">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-display text-3xl sm:text-4xl text-gold tracking-tight mb-4">
+            Order Delivery
+          </h2>
+          <p className="text-bone-muted mb-10">
+            Enjoy your favorite dishes from the comfort of your home, through
+            our trusted delivery partners.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://www.ubereats.com/ca/store/cedars-mediterranean-breakfast-lounge/orOBLU8pSLqgCwry8eLenQ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#05A357] text-white font-semibold rounded-full shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all"
+            >
+              <Image
+                src="/assets/icons/ubereats-logo.svg"
+                alt=""
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
+              Order on Uber Eats
+            </a>
+            <a
+              href="https://www.doordash.com/store/cedar's-mediterranean-breakfast-lounge-windsor-32283435/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-[#ef3b24] font-semibold rounded-full shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all"
+            >
+              <Image
+                src="/assets/icons/doordash-logo.svg"
+                alt=""
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
+              Order on DoorDash
+            </a>
+          </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

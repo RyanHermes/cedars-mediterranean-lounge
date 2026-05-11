@@ -36,6 +36,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# playwright mcp session artifacts
+.playwright-mcp/
+
+# screenshots taken at repo root for visual review
+/*.png
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

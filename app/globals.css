@@ -2,80 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #0a0a0a; /* Dark theme background by default */
-  --foreground: #ededed; /* Dark theme foreground by default */
+/* Skip rendering work for off-screen sections on long pages.
+   First section (hero) stays normal because it's above the fold. */
+main > section:not(:first-of-type) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
 }
 
-/* Optional: If you want to keep a light theme accessible via system preference, you can define it here */
-/*
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #ffffff;
-    --foreground: #171717;
-  }
-}
-*/
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Hamburger */
+header button.hamburger .hamburger-inner,
+header button.hamburger .hamburger-inner::before,
+header button.hamburger .hamburger-inner::after {
+  background-color: #f0e8d8;
 }
 
-/* Swiper */
-.custom-swiper-arrow {
-  color: #f4ce86;
-  font-size: 24px;
-  cursor: pointer;
-  width: auto;
-  height: auto;
+header button.hamburger.is-active .hamburger-inner,
+header button.hamburger.is-active .hamburger-inner::before,
+header button.hamburger.is-active .hamburger-inner::after {
+  background-color: #d4a574;
 }
 
-.custom-swiper-arrow::after {
-  font-size: 24px;
-  color: #f4ce86;
-}
-
-.custom-swiper-arrow:hover::after {
-  color: #d2a679;
-}
-
-.custom-swiper-dots {
-  bottom: 10px;
-}
-
-.custom-swiper-dots .swiper-pagination-bullet {
-  background: gray;
-  opacity: 1;
-  width: 8px;
-  height: 8px;
-  margin: 0 4px;
-}
-
-.custom-swiper-dots .swiper-pagination-bullet-active {
-  background: #f4ce86;
-}
-/* End of Swiper */
-
-/* Custom Hamburger Icon Colors */
-header .container button.hamburger .hamburger-inner,
-header .container button.hamburger .hamburger-inner::before,
-header .container button.hamburger .hamburger-inner::after {
-  background-color: white; /* Match header text color */
-}
-
-header .container button.hamburger.is-active .hamburger-inner,
-header .container button.hamburger.is-active .hamburger-inner::before,
-header .container button.hamburger.is-active .hamburger-inner::after {
-  background-color: white; /* Ensure active state is also white */
-}
-
-/* Force hide hamburger button on lg screens and up */
 @media (min-width: 1024px) {
-  /* Corresponds to Tailwind's default 'lg' breakpoint */
-  header .container button.hamburger {
-    /* Increased specificity */
+  header button.hamburger {
     display: none !important;
   }
 }

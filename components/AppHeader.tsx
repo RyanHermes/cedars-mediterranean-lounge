@@ -6,103 +6,92 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function AppHeader() {
+type NavLink = { href: string; label: string };
+
+const baseLinks: NavLink[] = [
+  { href: "/", label: "Home" },
+  { href: "/catering", label: "Catering" },
+  { href: "/hall-rental", label: "Hall Rental" },
+];
+
+export default function AppHeader({
+  showFestivalLink,
+}: {
+  showFestivalLink: boolean;
+}) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+  const toggleMobileMenu = () => setIsMobileMenuOpen((v) => !v);
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
+  const links: NavLink[] = showFestivalLink
+    ? [...baseLinks, { href: "/festival", label: "Festival" }]
+    : baseLinks;
 
   return (
-    <header className="relative">
+    <header className="sticky top-0 z-30 border-b border-bone/5 bg-ink-900">
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-black opacity-50 z-10 lg:hidden"
+          aria-hidden
+          className="fixed inset-0 bg-black/60 z-10 lg:hidden"
           onClick={closeMobileMenu}
-        ></div>
+        />
       )}
-      <div className="bg-amber-700 text-white p-4 shadow-lg relative z-20">
-        <div className="container mx-auto flex flex-nowrap justify-between items-center">
-          <Link
-            href="/"
-            passHref
-            className="flex items-center flex-shrink min-w-0 mr-2 overflow-hidden group"
-            onClick={closeMobileMenu}
-          >
-            <div className="mr-3 flex-shrink-0">
-              <Image
-                src="/assets/icons/cedar-logo.svg"
-                alt="Cedars Mediterranean Lounge Logo"
-                width={40}
-                height={40}
-                className="transition-all duration-300 ease-in-out group-hover:scale-115 filter drop-shadow-[0_0_1px_rgba(255,255,255,0.7)] group-hover:drop-shadow-[0_0_2px_rgba(255,215,0,0.9)]"
-                style={{ objectFit: "contain" }}
-              />
-            </div>
-            <span className="truncate text-[clamp(1rem,3.5vw,1.625rem)] font-bold transition-colors duration-300 group-hover:text-yellow-500">
-              Cedar&apos;s Mediterranean Lounge
-            </span>
-          </Link>
-          <button
-            className={`block lg:hidden hamburger hamburger--slider flex-shrink-0 ${
-              isMobileMenuOpen ? "is-active" : ""
-            }`}
-            type="button"
-            onClick={toggleMobileMenu}
-            aria-label="Menu"
-            aria-controls="navigation"
-            aria-expanded={isMobileMenuOpen}
-          >
-            <span className="hamburger-box">
-              <span className="hamburger-inner"></span>
-            </span>
-          </button>
-          <nav
-            id="navigation"
-            className={`
-              lg:flex lg:items-center lg:w-auto lg:relative lg:top-auto lg:left-auto lg:right-auto lg:bg-transparent lg:shadow-none lg:z-auto lg:p-0 lg:pt-0
-              ${
-                isMobileMenuOpen
-                  ? "block absolute top-full left-0 w-full bg-amber-800 shadow-xl z-30 p-4"
-                  : "hidden pt-2"
-              }
-            `}
-          >
-            <ul className="flex flex-col lg:flex-row lg:items-center lg:space-x-2 space-y-2 lg:space-y-0">
-              <li>
+      <div className="container mx-auto px-4 py-3 flex flex-nowrap justify-between items-center relative z-20">
+        <Link
+          href="/"
+          className="flex items-center gap-3 flex-shrink min-w-0 mr-2 overflow-hidden group"
+          onClick={closeMobileMenu}
+        >
+          <Image
+            src="/assets/icons/cedar-logo.svg"
+            alt=""
+            width={36}
+            height={36}
+            className="flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
+          />
+          <span className="font-display truncate text-[clamp(1rem,3.5vw,1.5rem)] tracking-tight text-bone group-hover:text-gold transition-colors">
+            Cedar&apos;s Mediterranean Lounge
+          </span>
+        </Link>
+
+        <button
+          className={`block lg:hidden hamburger hamburger--slider flex-shrink-0 ${
+            isMobileMenuOpen ? "is-active" : ""
+          }`}
+          type="button"
+          onClick={toggleMobileMenu}
+          aria-label="Menu"
+          aria-controls="navigation"
+          aria-expanded={isMobileMenuOpen}
+        >
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
+          </span>
+        </button>
+
+        <nav
+          id="navigation"
+          className={`lg:flex lg:items-center lg:w-auto ${
+            isMobileMenuOpen
+              ? "block absolute top-full left-0 w-full bg-ink-900 border-b border-bone/5 shadow-xl z-30 p-4"
+              : "hidden lg:block"
+          }`}
+        >
+          <ul className="flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-1">
+            {links.map((link) => (
+              <li key={link.href}>
                 <Link
-                  href="/"
-                  className="hover:text-gray-300 block px-2 py-1"
+                  href={link.href}
+                  className="block px-3 py-1.5 text-sm font-medium text-bone-muted hover:text-gold transition-colors rounded-md"
                   onClick={closeMobileMenu}
                 >
-                  Home
+                  {link.label}
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/catering"
-                  className="hover:text-gray-300 block px-2 py-1"
-                  onClick={closeMobileMenu}
-                >
-                  Catering
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/hall-rental"
-                  className="hover:text-gray-300 block px-2 py-1"
-                  onClick={closeMobileMenu}
-                >
-                  Hall Rental
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
+            ))}
+          </ul>
+        </nav>
       </div>
     </header>
   );
