@@ -55,22 +55,6 @@ export default function Home() {
           year.
         </p>
         <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-6">
-          {/* <a
-            href="/festival"
-            className="block bg-[#121212] p-6 rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
-          >
-            <h3 className="text-xl font-semibold text-[#f4ce86] mb-3">
-              Lebanese Festival
-            </h3>
-            <p className="text-[#eae0d5] mb-2">June 27th - June 29th</p>
-            <p className="text-sm text-[#f4efe8] mb-3">
-              Celebrate with us during this special cultural festival featuring
-              traditional Mediterranean cuisine, music, and entertainment
-            </p>
-            <p className="text-sm text-[#f4ce86] mt-3">
-              Click to view festival details &rarr;
-            </p>
-          </a> */}
           <a
             href="/catering"
             className="block w-full max-w-md bg-[#121212] p-6 rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300"
@@ -105,20 +89,6 @@ export default function Home() {
               Click for more details &rarr;
             </p>
           </a>
-          {/* <Link
-            href="/special-fundraising-event"
-            className="block bg-[#121212] p-6 rounded-lg border-2 border-[#8b4513] hover:border-[#f4ce86] hover:scale-105 transition-all duration-300 md:col-span-2"
-          >
-            <h3 className="text-xl font-semibold text-[#f4ce86] mb-3">
-              Special Fundraising Event
-            </h3>
-            <p className="text-sm text-[#f4efe8]">
-              Join us for a special fundraising event.
-            </p>
-            <p className="text-sm text-[#f4ce86] mt-3">
-              Click to learn more &rarr;
-            </p>
-          </Link> */}
         </div>
       </section>
       <section id="gallery" className="w-full py-10 bg-[#121212] px-4">
