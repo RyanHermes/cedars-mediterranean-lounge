@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Catering Services | Cedar's Mediterranean Lounge",
+  description:
+    "Authentic Mediterranean catering in Windsor, Ontario for parties, weddings, corporate events, and gatherings. Customizable menus and event packages from Cedar's Mediterranean Lounge.",
+};
+
 export default function CateringPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen font-sans bg-[#121212] text-[#eae0d5] px-4 py-8">

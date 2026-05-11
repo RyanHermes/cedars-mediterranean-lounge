@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Hall Rental | Cedar's Mediterranean Lounge",
+  description:
+    "Rent our beautiful hall in Windsor, Ontario for weddings, birthdays, corporate events, and private gatherings. Tables, chairs, sound system, and catering options available.",
+};
+
 export default function HallRentalPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen font-sans bg-[#121212] text-[#eae0d5] px-4 py-8">
