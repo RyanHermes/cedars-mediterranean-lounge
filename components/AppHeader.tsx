@@ -35,7 +35,7 @@ export default function AppHeader() {
           >
             <div className="mr-3 flex-shrink-0">
               <Image
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Arms_of_Lebanon.svg/640px-Arms_of_Lebanon.svg.png"
+                src="/assets/icons/cedar-logo.svg"
                 alt="Cedars Mediterranean Lounge Logo"
                 width={40}
                 height={40}
@@ -100,24 +100,6 @@ export default function AppHeader() {
                   Hall Rental
                 </Link>
               </li>
-              {/* <li>
-                <Link
-                  href="/festival"
-                  className="hover:text-gray-300 block px-2 py-1"
-                  onClick={closeMobileMenu}
-                >
-                  Festival
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/special-fundraising-event"
-                  className="hover:text-gray-300 block px-2 py-1"
-                  onClick={closeMobileMenu}
-                >
-                  Fundraising
-                </Link>
-              </li> */}
             </ul>
           </nav>
         </div>
